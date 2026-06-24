@@ -1,0 +1,71 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Compute base path
+        id: base
+        run: |
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"
+          echo "path=/$REPO_NAME/" >> "$GITHUB_OUTPUT"
+
+      - name: Build
+        env:
+          VITE_BASE_PATH: ${{ steps.base.outputs.path }}
+        run: bun run build
+
+      - name: SPA fallback (copy index.html to 404.html)
+        run: |
+          if [ -f dist/index.html ]; then
+            cp dist/index.html dist/404.html
+          elif [ -f dist/client/index.html ]; then
+            cp dist/client/index.html dist/client/404.html
+          fi
+
+      - name: Detect output directory
+        id: outdir
+        run: |
+          if [ -d dist/client ]; then
+            echo "dir=dist/client" >> "$GITHUB_OUTPUT"
+          else
+            echo "dir=dist" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ steps.outdir.outputs.dir }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
