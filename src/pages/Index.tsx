@@ -1,22 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
 import phase1 from "@/assets/phase1.png.asset.json";
 import phase2 from "@/assets/phase2.png.asset.json";
 import phase3 from "@/assets/phase3.png.asset.json";
 import phase4 from "@/assets/phase4.png.asset.json";
 import phase5 from "@/assets/phase5.png.asset.json";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Független műszaki tanácsadás | Ingatlan szakértő" },
-      { name: "description", content: "Független műszaki és szakmai támogatás ingatlan vásárlás, felújítás és értékesítés előtt. Több mint 30 év szakmai tapasztalat." },
-      { property: "og:title", content: "Független műszaki tanácsadás ingatlanokhoz" },
-      { property: "og:description", content: "30+ év tapasztalat. Kizárólag az Ön érdekében — nem az eladóé, nem a vevőé." },
-      { property: "og:image", content: phase4.url },
-    ],
-  }),
-  component: Index,
-});
 
 const services = [
   { title: "Vásárlás előtti felmérés", desc: "Az ingatlan műszaki állapotának feltárása, rejtett hibák és várható költségek azonosítása a megalapozott döntés érdekében." },
@@ -45,7 +31,7 @@ const reasons = [
   "Komplex támogatás döntéstől a megvalósításig",
 ];
 
-function Index() {
+export default function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Nav />
