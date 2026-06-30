@@ -30,8 +30,9 @@ jobs:
       - name: Compute base path
         id: base
         run: |
-          REPO_NAME="${GITHUB_REPOSITORY#*/}"
-          echo "path=/$REPO_NAME/" >> "$GITHUB_OUTPUT"
+          # Custom domain (ingatlankockazat.hu) → base must be "/"
+          echo "path=/" >> "$GITHUB_OUTPUT"
+
 
       - name: Build
         env:
