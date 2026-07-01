@@ -388,10 +388,10 @@ function Contact() {
             </p>
             <div className="space-y-3 text-sm">
               <a
-                href="tel:+36000000000"
+                href="tel:+36309039630"
                 className="flex items-center gap-3 hover:text-primary transition"
               >
-                <span className="text-primary">→</span> +36 00 000 0000
+                <span className="text-primary">→</span> +36 30 903 96 30
               </a>
               <a
                 href="mailto:info@ingatlankockazat.hu"
