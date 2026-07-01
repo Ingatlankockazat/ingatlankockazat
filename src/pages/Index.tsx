@@ -1,8 +1,14 @@
-import phase1 from "@/assets/phase1.png.asset.json";
-import phase2 from "@/assets/phase2.png.asset.json";
-import phase3 from "@/assets/phase3.png.asset.json";
-import phase4 from "@/assets/phase4.png.asset.json";
-import phase5 from "@/assets/phase5.png.asset.json";
+import phase1Url from "@/assets/phase1.png";
+import phase2Url from "@/assets/phase2.png";
+import phase3Url from "@/assets/phase3.png";
+import phase4Url from "@/assets/phase4.png";
+import phase5Url from "@/assets/phase5.png";
+
+const phase1 = { url: phase1Url };
+const phase2 = { url: phase2Url };
+const phase3 = { url: phase3Url };
+const phase4 = { url: phase4Url };
+const phase5 = { url: phase5Url };
 
 const services = [
   {
