@@ -7,27 +7,35 @@ import phase5 from "@/assets/phase5.png.asset.json";
 const services = [
   {
     title: "Vásárlás előtti felmérés",
-    desc: "Az ingatlan műszaki állapotának feltárása, rejtett hibák és várható költségek azonosítása a megalapozott döntés érdekében.",
+    desc: "Az ingatlan műszaki állapotának objektív felmérése, a rejtett hibák, várható költségek és kockázatok feltárása a megalapozott döntés érdekében.",
+  },
+  {
+    title: "Ingatlan jogi hátterének ellenőrzése",
+    desc: "Tulajdoni lap, terhek, szolgalmi jogok, használati viszonyok és egyéb jogi kockázatok áttekintése szakértői háttérrel.",
+  },
+  {
+    title: "Hitel, finanszírozás és biztosítás",
+    desc: "Független segítség a megfelelő finanszírozási és biztosítási megoldások kiválasztásában, az ügyfél érdekeit szem előtt tartva.",
   },
   {
     title: "Felújítási tanácsadás",
-    desc: "Tervezett felújítások előkészítése, szükséges munkák meghatározása és reális költségbecslés.",
+    desc: "Tervezett felújítások előkészítése, a szükséges munkák meghatározása, költségbecslés és műszaki javaslatok.",
   },
   {
     title: "Értékesítés előtti felkészítés",
-    desc: "Olyan területek azonosítása, amelyek fejlesztésével az ingatlan piaci értéke és megjelenése növelhető.",
+    desc: "Az ingatlan értékét és piacképességét növelő fejlesztési lehetőségek azonosítása, felkészítés az eredményes értékesítésre.",
   },
   {
     title: "Karbantartás és üzemeltetés",
-    desc: "Javaslatok az állagmegóvásra, hosszú távú fenntartásra és költséghatékony üzemeltetésre.",
+    desc: "Javaslatok az ingatlan hosszú távú állagmegóvására, költséghatékony üzemeltetésére és fenntartására.",
   },
   {
-    title: "Szakember- és kivitelezői háttér",
-    desc: "Megfelelő szakemberek, kivitelezők és műszaki partnerek bevonása, a munkák szakmai koordinációja.",
+    title: "Szakemberek és kivitelezők koordinációja",
+    desc: "Megbízható tervezők, kivitelezők és műszaki szakemberek ajánlása, valamint a munkák szakmai koordinációja és nyomon követése.",
   },
   {
-    title: "Magánszemély és vállalkozás",
-    desc: "Szolgáltatásunk egyaránt elérhető magánszemélyek, befektetők és vállalkozások számára.",
+    title: "Mediáció és független képviselet",
+    desc: "Független szakmai közreműködés vitás helyzetekben, valamint pontos és minden fél számára egyértelmű megállapodások előkészítése tulajdonosok, vevők, kivitelezők és egyéb érintettek között.",
   },
 ];
 
