@@ -51,7 +51,7 @@ function Nav() {
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/50">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#top" className="font-display text-xl tracking-wide">
-          <span className="text-gold">Ingatlan</span>Tanácsadó
+          <span className="text-gold">Ingatlan</span>Kockázat
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#rolunk" className="hover:text-foreground transition">Rólunk</a>
@@ -239,8 +239,8 @@ function Contact() {
               <a href="tel:+36000000000" className="flex items-center gap-3 hover:text-primary transition">
                 <span className="text-primary">→</span> +36 00 000 0000
               </a>
-              <a href="mailto:info@ingatlantanacsado.hu" className="flex items-center gap-3 hover:text-primary transition">
-                <span className="text-primary">→</span> info@ingatlantanacsado.hu
+              <a href="mailto:info@ingatlankockazat.hu" className="flex items-center gap-3 hover:text-primary transition">
+                <span className="text-primary">→</span> info@ingatlankockazat.hu
               </a>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <span className="text-primary">→</span> Budapest és környéke
@@ -266,7 +266,7 @@ function Footer() {
   return (
     <footer className="border-t border-border/50 py-10">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-4 items-center justify-between text-sm text-muted-foreground">
-        <div className="font-display text-lg"><span className="text-gold">Ingatlan</span>Tanácsadó</div>
+        <div className="font-display text-lg"><span className="text-gold">Ingatlan</span>Kockázat</div>
         <p>© {new Date().getFullYear()} Minden jog fenntartva. Független műszaki tanácsadás.</p>
       </div>
     </footer>
