@@ -1,20 +1,8 @@
-import phase1Url from "@/assets/phase1.png";
-import phase2Url from "@/assets/phase2.png";
-import phase3Url from "@/assets/phase3.png";
-import phase4Url from "@/assets/phase4.png";
-import phase5Url from "@/assets/phase5.png";
 import service1Url from "@/assets/service1.jpg";
 import service2Url from "@/assets/service2.jpg";
 import service3Url from "@/assets/service3.jpg";
 import service4Url from "@/assets/service4.jpg";
 import service5Url from "@/assets/service5.jpg";
-
-const phase1 = { url: phase1Url };
-const phase2 = { url: phase2Url };
-const phase3 = { url: phase3Url };
-const phase4 = { url: phase4Url };
-const phase5 = { url: phase5Url };
-
 
 const services = [
   {
@@ -44,38 +32,6 @@ const services = [
   },
 ];
 
-const phases = [
-  {
-    img: phase1.url,
-    num: "01",
-    title: "Tanácstalanság",
-    desc: "Az első benyomások megtévesztők lehetnek. A rejtett problémák később milliós kiadásokat okozhatnak.",
-  },
-  {
-    img: phase2.url,
-    num: "02",
-    title: "Szakmai felmérés",
-    desc: "Helyszíni bejárás, műszaki állapotfelmérés, kockázatok és lehetőségek feltárása.",
-  },
-  {
-    img: phase3.url,
-    num: "03",
-    title: "Tervezés",
-    desc: "Részletes terv, anyagválasztás, költségbecslés — közösen az Ön igényei szerint.",
-  },
-  {
-    img: phase5.url,
-    num: "04",
-    title: "Megvalósítás",
-    desc: "Megbízható szakemberek, folyamatos műszaki ellenőrzés, határidők betartása.",
-  },
-  {
-    img: phase4.url,
-    num: "05",
-    title: "Sikeres projekt",
-    desc: "Átláthatóan elköltött költségvetés, kiszámítható eredmény, elégedett ügyfél.",
-  },
-];
 
 const reasons = [
   "30+ év építőipari és műszaki tapasztalat",
@@ -94,7 +50,6 @@ export default function Index() {
       <Hero />
       <About />
       <Services />
-      <Process />
       <References />
       <Contact />
       <Footer />
@@ -192,7 +147,7 @@ function Hero() {
             style={{ background: "var(--gradient-gold)" }}
           />
           <img
-            src={phase4.url}
+            src={service3Url}
             alt="Sikeresen lezárt ingatlanprojekt"
             className="relative rounded-2xl border border-border/60"
             style={{ boxShadow: "var(--shadow-elegant)" }}
@@ -303,45 +258,6 @@ function Services() {
   );
 }
 
-
-function Process() {
-  return (
-    <section className="py-24 md:py-32 max-w-6xl mx-auto px-6">
-      <div className="max-w-2xl mb-14">
-        <p className="text-xs uppercase tracking-[0.25em] text-primary/80 mb-4">Folyamat</p>
-        <h2 className="text-3xl md:text-5xl leading-tight">
-          Útban a <span className="text-gold italic">sikeres projektig</span>.
-        </h2>
-      </div>
-      <div className="space-y-12">
-        {phases.map((p, i) => (
-          <div
-            key={i}
-            className={`grid md:grid-cols-2 gap-8 md:gap-12 items-center ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}
-          >
-            <div className="relative">
-              <div
-                className="absolute -inset-2 rounded-xl opacity-20 blur-2xl"
-                style={{ background: "var(--gradient-gold)" }}
-              />
-              <img
-                src={p.img}
-                alt={p.title}
-                className="relative rounded-xl border border-border/60 w-full"
-                loading="lazy"
-              />
-            </div>
-            <div>
-              <div className="font-display text-gold text-6xl md:text-7xl mb-3">{p.num}</div>
-              <h3 className="text-2xl md:text-3xl mb-3">{p.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{p.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 function References() {
   const items = [
