@@ -3,6 +3,11 @@ import phase2Url from "@/assets/phase2.png";
 import phase3Url from "@/assets/phase3.png";
 import phase4Url from "@/assets/phase4.png";
 import phase5Url from "@/assets/phase5.png";
+import service1Url from "@/assets/service1.jpg";
+import service2Url from "@/assets/service2.jpg";
+import service3Url from "@/assets/service3.jpg";
+import service4Url from "@/assets/service4.jpg";
+import service5Url from "@/assets/service5.jpg";
 
 const phase1 = { url: phase1Url };
 const phase2 = { url: phase2Url };
@@ -10,38 +15,32 @@ const phase3 = { url: phase3Url };
 const phase4 = { url: phase4Url };
 const phase5 = { url: phase5Url };
 
+
 const services = [
   {
-    title: "Vásárlás előtti felmérés",
-    desc: "Az ingatlan műszaki állapotának objektív felmérése, a rejtett hibák, várható költségek és kockázatok feltárása a megalapozott döntés érdekében.",
+    img: service1Url,
+    title: "Rejtett műszaki hibák feltárása",
+    desc: "Feltárjuk azokat a műszaki hibákat és kockázatokat, amelyek a vásárlás után jelentős javítási költséget okozhatnak.",
   },
   {
-    title: "Ingatlan jogi hátterének ellenőrzése",
-    desc: "Tulajdoni lap, terhek, szolgalmi jogok, használati viszonyok és egyéb jogi kockázatok áttekintése szakértői háttérrel.",
+    img: service2Url,
+    title: "Jogi és tulajdoni kockázatok",
+    desc: "Átvizsgáljuk az ingatlan jogi hátterét, tulajdoni viszonyait és az esetleges terheket, hogy Ön biztonságos döntést hozhasson.",
   },
   {
-    title: "Hitel, finanszírozás és biztosítás",
-    desc: "Független segítség a megfelelő finanszírozási és biztosítási megoldások kiválasztásában, az ügyfél érdekeit szem előtt tartva.",
+    img: service3Url,
+    title: "Teljes körű pénzügyi tanácsadás",
+    desc: "Segítünk kiválasztani a legkedvezőbb hitel-, finanszírozási és biztosítási megoldásokat, teljesen független szakmai szemlélettel.",
   },
   {
-    title: "Felújítási tanácsadás",
-    desc: "Tervezett felújítások előkészítése, a szükséges munkák meghatározása, költségbecslés és műszaki javaslatok.",
+    img: service4Url,
+    title: "Felújítási tervezés és költségbecslés",
+    desc: "Reális képet adunk a szükséges felújításokról, azok várható költségeiről és a lehetséges műszaki megoldásokról.",
   },
   {
-    title: "Értékesítés előtti felkészítés",
-    desc: "Az ingatlan értékét és piacképességét növelő fejlesztési lehetőségek azonosítása, felkészítés az eredményes értékesítésre.",
-  },
-  {
-    title: "Karbantartás és üzemeltetés",
-    desc: "Javaslatok az ingatlan hosszú távú állagmegóvására, költséghatékony üzemeltetésére és fenntartására.",
-  },
-  {
-    title: "Szakemberek és kivitelezők koordinációja",
-    desc: "Megbízható tervezők, kivitelezők és műszaki szakemberek ajánlása, valamint a munkák szakmai koordinációja és nyomon követése.",
-  },
-  {
-    title: "Mediáció és független képviselet",
-    desc: "Független szakmai közreműködés vitás helyzetekben, valamint pontos és minden fél számára egyértelmű megállapodások előkészítése tulajdonosok, vevők, kivitelezők és egyéb érintettek között.",
+    img: service5Url,
+    title: "Mediáció és vitás helyzetek rendezése",
+    desc: "Független mediációval segítünk rendezni a lakásvásárlás, felújítás vagy értékesítés során felmerülő vitákat, valamint támogatjuk a felek közötti korrekt és egyértelmű megállapodások létrejöttét.",
   },
 ];
 
