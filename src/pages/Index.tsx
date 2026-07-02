@@ -241,32 +241,68 @@ function About() {
 function Services() {
   return (
     <section id="szolgaltatasok" className="py-24 md:py-32 bg-card/30 border-y border-border/50">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="max-w-2xl mb-14">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-3xl mb-16 md:mb-20">
           <p className="text-xs uppercase tracking-[0.25em] text-primary/80 mb-4">Szolgáltatások</p>
-          <h2 className="text-3xl md:text-5xl leading-tight">
-            Komplex támogatás az ingatlan{" "}
-            <span className="text-gold italic">teljes életciklusában</span>.
+          <h2 className="text-3xl md:text-5xl leading-tight mb-6">
+            Miben segítünk <span className="text-gold italic">Önnek?</span>
           </h2>
+          <div className="hairline mb-6" />
+          <p className="text-muted-foreground leading-relaxed text-lg">
+            Az ingatlanvásárlás, felújítás vagy értékesítés során egy rossz döntés komoly anyagi
+            veszteséget okozhat. Független szakértőként segítünk feltárni a kockázatokat, átlátni a
+            lehetőségeket és biztonságos döntést hozni.
+          </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-7">
           {services.map((s, i) => (
             <article
               key={i}
-              className="group p-7 rounded-2xl bg-background/80 border border-border/60 hover:border-primary/50 transition relative overflow-hidden"
+              className="group relative rounded-2xl bg-background/70 border border-border/60 hover:border-primary/60 transition-all duration-500 hover:-translate-y-1 overflow-hidden flex flex-col animate-fade-in"
+              style={{
+                animationDelay: `${i * 80}ms`,
+                boxShadow: "0 20px 60px -30px rgba(0,0,0,0.6)",
+              }}
             >
-              <div className="absolute top-0 right-0 font-display text-7xl text-primary/5 leading-none p-4">
-                {String(i + 1).padStart(2, "0")}
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+                <div className="absolute top-4 left-4 font-display text-gold text-2xl tracking-wide">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
               </div>
-              <h3 className="text-xl mb-3 relative">{s.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed relative">{s.desc}</p>
+              <div className="p-6 md:p-7 flex-1 flex flex-col">
+                <h3 className="text-xl md:text-2xl mb-3 leading-snug">{s.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+              </div>
+              <div
+                className="absolute inset-x-0 bottom-0 h-px opacity-0 group-hover:opacity-100 transition-opacity"
+                style={{ background: "var(--gradient-gold)" }}
+              />
             </article>
           ))}
         </div>
+        <figure className="mt-20 md:mt-24 max-w-4xl mx-auto text-center">
+          <div className="hairline mb-10" />
+          <blockquote className="font-display text-2xl md:text-4xl italic leading-snug">
+            „Az <span className="text-gold not-italic">IngatlanKockázat</span> célja, hogy Ön minden
+            fontos ingatlandöntést biztonságban, megfelelő információk birtokában és felesleges
+            kockázatok nélkül hozhassa meg."
+          </blockquote>
+          <div className="hairline mt-10" />
+        </figure>
       </div>
     </section>
   );
 }
+
 
 function Process() {
   return (
