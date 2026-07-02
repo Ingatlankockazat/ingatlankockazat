@@ -3,6 +3,11 @@ import phase2Url from "@/assets/phase2.png";
 import phase3Url from "@/assets/phase3.png";
 import phase4Url from "@/assets/phase4.png";
 import phase5Url from "@/assets/phase5.png";
+import service1Url from "@/assets/service1.jpg";
+import service2Url from "@/assets/service2.jpg";
+import service3Url from "@/assets/service3.jpg";
+import service4Url from "@/assets/service4.jpg";
+import service5Url from "@/assets/service5.jpg";
 
 const phase1 = { url: phase1Url };
 const phase2 = { url: phase2Url };
@@ -10,38 +15,32 @@ const phase3 = { url: phase3Url };
 const phase4 = { url: phase4Url };
 const phase5 = { url: phase5Url };
 
+
 const services = [
   {
-    title: "Vásárlás előtti felmérés",
-    desc: "Az ingatlan műszaki állapotának objektív felmérése, a rejtett hibák, várható költségek és kockázatok feltárása a megalapozott döntés érdekében.",
+    img: service1Url,
+    title: "Rejtett műszaki hibák feltárása",
+    desc: "Feltárjuk azokat a műszaki hibákat és kockázatokat, amelyek a vásárlás után jelentős javítási költséget okozhatnak.",
   },
   {
-    title: "Ingatlan jogi hátterének ellenőrzése",
-    desc: "Tulajdoni lap, terhek, szolgalmi jogok, használati viszonyok és egyéb jogi kockázatok áttekintése szakértői háttérrel.",
+    img: service2Url,
+    title: "Jogi és tulajdoni kockázatok",
+    desc: "Átvizsgáljuk az ingatlan jogi hátterét, tulajdoni viszonyait és az esetleges terheket, hogy Ön biztonságos döntést hozhasson.",
   },
   {
-    title: "Hitel, finanszírozás és biztosítás",
-    desc: "Független segítség a megfelelő finanszírozási és biztosítási megoldások kiválasztásában, az ügyfél érdekeit szem előtt tartva.",
+    img: service3Url,
+    title: "Teljes körű pénzügyi tanácsadás",
+    desc: "Segítünk kiválasztani a legkedvezőbb hitel-, finanszírozási és biztosítási megoldásokat, teljesen független szakmai szemlélettel.",
   },
   {
-    title: "Felújítási tanácsadás",
-    desc: "Tervezett felújítások előkészítése, a szükséges munkák meghatározása, költségbecslés és műszaki javaslatok.",
+    img: service4Url,
+    title: "Felújítási tervezés és költségbecslés",
+    desc: "Reális képet adunk a szükséges felújításokról, azok várható költségeiről és a lehetséges műszaki megoldásokról.",
   },
   {
-    title: "Értékesítés előtti felkészítés",
-    desc: "Az ingatlan értékét és piacképességét növelő fejlesztési lehetőségek azonosítása, felkészítés az eredményes értékesítésre.",
-  },
-  {
-    title: "Karbantartás és üzemeltetés",
-    desc: "Javaslatok az ingatlan hosszú távú állagmegóvására, költséghatékony üzemeltetésére és fenntartására.",
-  },
-  {
-    title: "Szakemberek és kivitelezők koordinációja",
-    desc: "Megbízható tervezők, kivitelezők és műszaki szakemberek ajánlása, valamint a munkák szakmai koordinációja és nyomon követése.",
-  },
-  {
-    title: "Mediáció és független képviselet",
-    desc: "Független szakmai közreműködés vitás helyzetekben, valamint pontos és minden fél számára egyértelmű megállapodások előkészítése tulajdonosok, vevők, kivitelezők és egyéb érintettek között.",
+    img: service5Url,
+    title: "Mediáció és vitás helyzetek rendezése",
+    desc: "Független mediációval segítünk rendezni a lakásvásárlás, felújítás vagy értékesítés során felmerülő vitákat, valamint támogatjuk a felek közötti korrekt és egyértelmű megállapodások létrejöttét.",
   },
 ];
 
@@ -242,32 +241,68 @@ function About() {
 function Services() {
   return (
     <section id="szolgaltatasok" className="py-24 md:py-32 bg-card/30 border-y border-border/50">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="max-w-2xl mb-14">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-3xl mb-16 md:mb-20">
           <p className="text-xs uppercase tracking-[0.25em] text-primary/80 mb-4">Szolgáltatások</p>
-          <h2 className="text-3xl md:text-5xl leading-tight">
-            Komplex támogatás az ingatlan{" "}
-            <span className="text-gold italic">teljes életciklusában</span>.
+          <h2 className="text-3xl md:text-5xl leading-tight mb-6">
+            Miben segítünk <span className="text-gold italic">Önnek?</span>
           </h2>
+          <div className="hairline mb-6" />
+          <p className="text-muted-foreground leading-relaxed text-lg">
+            Az ingatlanvásárlás, felújítás vagy értékesítés során egy rossz döntés komoly anyagi
+            veszteséget okozhat. Független szakértőként segítünk feltárni a kockázatokat, átlátni a
+            lehetőségeket és biztonságos döntést hozni.
+          </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-7">
           {services.map((s, i) => (
             <article
               key={i}
-              className="group p-7 rounded-2xl bg-background/80 border border-border/60 hover:border-primary/50 transition relative overflow-hidden"
+              className="group relative rounded-2xl bg-background/70 border border-border/60 hover:border-primary/60 transition-all duration-500 hover:-translate-y-1 overflow-hidden flex flex-col animate-fade-in"
+              style={{
+                animationDelay: `${i * 80}ms`,
+                boxShadow: "0 20px 60px -30px rgba(0,0,0,0.6)",
+              }}
             >
-              <div className="absolute top-0 right-0 font-display text-7xl text-primary/5 leading-none p-4">
-                {String(i + 1).padStart(2, "0")}
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+                <div className="absolute top-4 left-4 font-display text-gold text-2xl tracking-wide">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
               </div>
-              <h3 className="text-xl mb-3 relative">{s.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed relative">{s.desc}</p>
+              <div className="p-6 md:p-7 flex-1 flex flex-col">
+                <h3 className="text-xl md:text-2xl mb-3 leading-snug">{s.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+              </div>
+              <div
+                className="absolute inset-x-0 bottom-0 h-px opacity-0 group-hover:opacity-100 transition-opacity"
+                style={{ background: "var(--gradient-gold)" }}
+              />
             </article>
           ))}
         </div>
+        <figure className="mt-20 md:mt-24 max-w-4xl mx-auto text-center">
+          <div className="hairline mb-10" />
+          <blockquote className="font-display text-2xl md:text-4xl italic leading-snug">
+            „Az <span className="text-gold not-italic">IngatlanKockázat</span> célja, hogy Ön minden
+            fontos ingatlandöntést biztonságban, megfelelő információk birtokában és felesleges
+            kockázatok nélkül hozhassa meg."
+          </blockquote>
+          <div className="hairline mt-10" />
+        </figure>
       </div>
     </section>
   );
 }
+
 
 function Process() {
   return (
