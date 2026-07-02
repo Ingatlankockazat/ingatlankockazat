@@ -1,20 +1,8 @@
-import phase1Url from "@/assets/phase1.png";
-import phase2Url from "@/assets/phase2.png";
-import phase3Url from "@/assets/phase3.png";
-import phase4Url from "@/assets/phase4.png";
-import phase5Url from "@/assets/phase5.png";
 import service1Url from "@/assets/service1.jpg";
 import service2Url from "@/assets/service2.jpg";
 import service3Url from "@/assets/service3.jpg";
 import service4Url from "@/assets/service4.jpg";
 import service5Url from "@/assets/service5.jpg";
-
-const phase1 = { url: phase1Url };
-const phase2 = { url: phase2Url };
-const phase3 = { url: phase3Url };
-const phase4 = { url: phase4Url };
-const phase5 = { url: phase5Url };
-
 
 const services = [
   {
@@ -44,38 +32,6 @@ const services = [
   },
 ];
 
-const phases = [
-  {
-    img: phase1.url,
-    num: "01",
-    title: "Tanácstalanság",
-    desc: "Az első benyomások megtévesztők lehetnek. A rejtett problémák később milliós kiadásokat okozhatnak.",
-  },
-  {
-    img: phase2.url,
-    num: "02",
-    title: "Szakmai felmérés",
-    desc: "Helyszíni bejárás, műszaki állapotfelmérés, kockázatok és lehetőségek feltárása.",
-  },
-  {
-    img: phase3.url,
-    num: "03",
-    title: "Tervezés",
-    desc: "Részletes terv, anyagválasztás, költségbecslés — közösen az Ön igényei szerint.",
-  },
-  {
-    img: phase5.url,
-    num: "04",
-    title: "Megvalósítás",
-    desc: "Megbízható szakemberek, folyamatos műszaki ellenőrzés, határidők betartása.",
-  },
-  {
-    img: phase4.url,
-    num: "05",
-    title: "Sikeres projekt",
-    desc: "Átláthatóan elköltött költségvetés, kiszámítható eredmény, elégedett ügyfél.",
-  },
-];
 
 const reasons = [
   "30+ év építőipari és műszaki tapasztalat",
