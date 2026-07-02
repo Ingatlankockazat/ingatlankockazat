@@ -260,45 +260,6 @@ function Services() {
 }
 
 
-function Process() {
-  return (
-    <section className="py-24 md:py-32 max-w-6xl mx-auto px-6">
-      <div className="max-w-2xl mb-14">
-        <p className="text-xs uppercase tracking-[0.25em] text-primary/80 mb-4">Folyamat</p>
-        <h2 className="text-3xl md:text-5xl leading-tight">
-          Útban a <span className="text-gold italic">sikeres projektig</span>.
-        </h2>
-      </div>
-      <div className="space-y-12">
-        {phases.map((p, i) => (
-          <div
-            key={i}
-            className={`grid md:grid-cols-2 gap-8 md:gap-12 items-center ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}
-          >
-            <div className="relative">
-              <div
-                className="absolute -inset-2 rounded-xl opacity-20 blur-2xl"
-                style={{ background: "var(--gradient-gold)" }}
-              />
-              <img
-                src={p.img}
-                alt={p.title}
-                className="relative rounded-xl border border-border/60 w-full"
-                loading="lazy"
-              />
-            </div>
-            <div>
-              <div className="font-display text-gold text-6xl md:text-7xl mb-3">{p.num}</div>
-              <h3 className="text-2xl md:text-3xl mb-3">{p.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{p.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 function References() {
   const items = [
     {
