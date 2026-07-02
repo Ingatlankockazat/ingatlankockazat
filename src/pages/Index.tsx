@@ -148,7 +148,7 @@ function Hero() {
             style={{ background: "var(--gradient-gold)" }}
           />
           <img
-            src={phase4.url}
+            src={service3Url}
             alt="Sikeresen lezárt ingatlanprojekt"
             className="relative rounded-2xl border border-border/60"
             style={{ boxShadow: "var(--shadow-elegant)" }}
