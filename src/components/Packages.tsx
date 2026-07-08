@@ -199,9 +199,11 @@ export function Packages() {
                     <div className="flex flex-col items-center gap-3">
                       <div className="flex items-center gap-2">
                         {pkg.singlePriceIcon && (
-                          <pkg.singlePriceIcon className="w-5 h-5 text-primary" strokeWidth={1.5} />
+                          <pkg.singlePriceIcon className="w-5 h-5 text-primary shrink-0" strokeWidth={1.5} />
                         )}
-                        <span className="font-display text-2xl text-gold">{pkg.singlePrice}</span>
+                        <span className="font-display text-xl text-gold leading-tight">
+                          {pkg.singlePrice}
+                        </span>
                       </div>
                       {pkg.cta && (
                         <a
