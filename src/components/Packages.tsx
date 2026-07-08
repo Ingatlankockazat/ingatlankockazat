@@ -141,7 +141,7 @@ export function Packages() {
             return (
               <article
                 key={i}
-                className={`group relative rounded-2xl p-6 flex flex-col h-full text-center transition-all duration-500 hover:-translate-y-1 overflow-hidden animate-fade-in ${
+                className={`group relative rounded-2xl p-5 flex flex-col h-full text-center transition-all duration-500 hover:-translate-y-1 overflow-hidden animate-fade-in ${
                   highlighted
                     ? "border-2 border-primary bg-card/50"
                     : "border border-primary/40 bg-card/40 hover:border-primary/80"
