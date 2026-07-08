@@ -176,7 +176,7 @@ export function Packages() {
                   <div className="h-px w-8 bg-primary/40" />
                 </div>
 
-                <h3 className="font-display text-xl md:text-2xl mb-3 leading-tight">
+                <h3 className="font-display text-xl md:text-2xl mb-3 leading-tight break-words">
                   {pkg.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
