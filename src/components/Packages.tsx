@@ -287,7 +287,7 @@ export function Packages() {
             </blockquote>
             <a
               href="#kapcsolat"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-medium text-sm md:text-base whitespace-nowrap transition hover:bg-primary/90"
+              className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-full bg-primary text-primary-foreground font-medium text-xs md:text-sm uppercase tracking-wider whitespace-nowrap transition hover:bg-primary/90"
               style={{ boxShadow: "var(--shadow-glow)" }}
             >
               <User className="w-5 h-5" strokeWidth={1.5} />
