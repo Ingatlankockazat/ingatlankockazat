@@ -59,6 +59,7 @@ export default function Index() {
       <Hero />
       <About />
       <Services />
+      <Packages />
       <References />
       <Contact />
       <Footer />
