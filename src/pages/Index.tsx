@@ -267,6 +267,225 @@ function Services() {
   );
 }
 
+function Packages() {
+  const packages = [
+    {
+      label: "DÍJMENTES",
+      title: "Első konzultáció",
+      icon: MessageSquare,
+      desc: "Mielőtt bármilyen döntést hozna, beszéljük át az ingatlannal kapcsolatos kérdéseit.",
+      contents: [
+        "30 perces online vagy telefonos konzultáció",
+        "helyzetfelmérés",
+        "első szakmai iránymutatás",
+        "javaslat a következő lépésekre",
+      ],
+      price: "Díjmentes",
+      cta: "Időpontot kérek",
+    },
+    {
+      title: "Ingatlan Kockázatfelmérés",
+      icon: Building2,
+      desc: "Helyszíni felmérés, amely feltárja a műszaki, jogi és pénzügyi kockázatokat még a vásárlás előtt.",
+      contents: [
+        "műszaki állapotfelmérés",
+        "rejtett hibák feltárása",
+        "jogi háttér áttekintése",
+        "pénzügyi kötelezettségek áttekintése",
+        "személyes konzultáció",
+      ],
+      prices: [
+        { label: "Lakás", value: "150 000 Ft" },
+        { label: "Családi ház", value: "200 000 Ft" },
+      ],
+    },
+    {
+      title: "Felújítási és korszerűsítési tanácsadás",
+      icon: Paintbrush,
+      desc: "Segítünk megtervezni a felújítást, a korszerűsítést és a várható költségeket.",
+      contents: [
+        "műszaki tanácsadás",
+        "felújítási javaslatok",
+        "korszerűsítési lehetőségek",
+        "költségbecslés",
+        "megvalósítási sorrend",
+      ],
+      prices: [
+        { label: "Lakás", value: "350 000 Ft" },
+        { label: "Családi ház", value: "550 000 Ft" },
+      ],
+    },
+    {
+      title: "Felújítási koncepció",
+      icon: FileText,
+      desc: "Szakmai javaslati terv készítése, amely megmutatja a felújítás legjobb irányát.",
+      contents: [
+        "felújítási koncepció",
+        "műszaki javaslatok",
+        "munkafolyamatok sorrendje",
+        "költségtervezési irányelvek",
+        "megvalósítási ajánlások",
+      ],
+      price: "Egyedi ajánlat alapján",
+    },
+    {
+      label: "PRÉMIUM SZOLGÁLTATÁS",
+      title: "Projektmenedzsment",
+      icon: ListChecks,
+      desc: "A teljes beruházás szakmai koordinációja az első egyeztetéstől egészen az átadásig.",
+      contents: [
+        "kivitelezők kiválasztásának támogatása",
+        "ajánlatok szakmai összehasonlítása",
+        "műszaki ellenőrzések",
+        "helyszíni bejárások",
+        "projektkoordináció",
+        "folyamatos szakmai képviselet",
+      ],
+      prices: [
+        { label: "Lakás", value: "1 200 000 Ft-tól" },
+        { label: "Családi ház", value: "Egyedi ajánlat" },
+      ],
+    },
+  ];
+
+  const extras = [
+    "Teljes körű pénzügyi tanácsadás",
+    "Ingatlan jogi hátterének áttekintése",
+    "Értékesítés előtti műszaki felkészítés",
+    "Karbantartási és üzemeltetési tanácsadás",
+    "Megbízható szakemberek ajánlása",
+    "Kivitelezők szakmai koordinációja",
+    "Mediáció és vitás helyzetek rendezése",
+    "Független szakmai képviselet",
+  ];
+
+  return (
+    <section id="csomagok" className="py-24 md:py-32 bg-background border-y border-border/50">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-3xl mb-16 md:mb-20">
+          <p className="text-xs uppercase tracking-[0.25em] text-primary/80 mb-4">Szolgáltatási csomagok</p>
+          <h2 className="text-3xl md:text-5xl leading-tight mb-6">
+            Szolgáltatási <span className="text-gold italic">csomagok</span>
+          </h2>
+          <div className="hairline mb-6" />
+          <p className="text-muted-foreground leading-relaxed text-lg">
+            Az első konzultációtól a teljes projektmenedzsmentig. Független szakmai támogatás
+            minden fontos ingatlandöntéshez.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-7">
+          {packages.map((pkg, i) => {
+            const Icon = pkg.icon;
+            const highlighted = pkg.label === "DÍJMENTES" || pkg.label === "PRÉMIUM SZOLGÁLTATÁS";
+            return (
+              <article
+                key={i}
+                className={`group relative rounded-2xl bg-card/60 border p-6 md:p-7 flex flex-col h-full transition-all duration-500 hover:-translate-y-1 hover:shadow-[var(--shadow-glow)] overflow-hidden animate-fade-in ${
+                  highlighted ? "border-primary" : "border-border/60 hover:border-primary/60"
+                }`}
+                style={{ animationDelay: `${i * 80}ms` }}
+              >
+                {pkg.label && (
+                  <div className="mb-5">
+                    <span
+                      className="inline-block px-3 py-1 text-[10px] uppercase tracking-[0.15em] font-medium rounded-full border border-primary/60 text-primary bg-primary/5"
+                    >
+                      {pkg.label}
+                    </span>
+                  </div>
+                )}
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+                  style={{ background: "var(--gradient-gold)" }}
+                >
+                  <Icon className="w-6 h-6 text-primary-foreground" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-xl md:text-2xl mb-3 leading-snug">{pkg.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-5">{pkg.desc}</p>
+                <ul className="space-y-2 mb-6 flex-1">
+                  {pkg.contents.map((c, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-sm text-foreground/80">
+                      <span className="text-primary mt-1">·</span>
+                      <span>{c}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-auto">
+                  {pkg.price ? (
+                    <div className="font-display text-2xl md:text-3xl text-gold mb-4">{pkg.price}</div>
+                  ) : pkg.prices ? (
+                    <div className="space-y-2 mb-4">
+                      {pkg.prices.map((p, idx) => (
+                        <div
+                          key={idx}
+                          className="flex items-center justify-between text-sm border-b border-border/40 pb-2"
+                        >
+                          <span className="text-muted-foreground">{p.label}</span>
+                          <span className="font-display text-lg text-gold">{p.value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
+                  {pkg.cta && (
+                    <a
+                      href="#kapcsolat"
+                      className="block w-full text-center py-3 rounded-full text-primary-foreground font-medium text-sm"
+                      style={{ background: "var(--gradient-gold)", boxShadow: "var(--shadow-glow)" }}
+                    >
+                      {pkg.cta}
+                    </a>
+                  )}
+                </div>
+                <div
+                  className="absolute inset-x-0 bottom-0 h-px opacity-0 group-hover:opacity-100 transition-opacity"
+                  style={{ background: "var(--gradient-gold)" }}
+                />
+              </article>
+            );
+          })}
+        </div>
+
+        <div
+          className="mt-16 md:mt-20 rounded-2xl border border-primary/60 p-8 md:p-12 bg-card/40"
+          style={{ boxShadow: "0 0 80px -30px oklch(0.82 0.11 82 / 0.25)" }}
+        >
+          <h3 className="text-2xl md:text-3xl mb-8 text-center">Kiegészítő szolgáltatások</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4">
+            {extras.map((extra, i) => (
+              <div key={i} className="flex items-center gap-3 text-sm text-foreground/90">
+                <span
+                  className="w-5 h-5 rounded-full flex items-center justify-center shrink-0"
+                  style={{ background: "var(--gradient-gold)" }}
+                >
+                  <Check className="w-3 h-3 text-primary-foreground" strokeWidth={3} />
+                </span>
+                {extra}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <figure className="mt-20 md:mt-24 max-w-4xl mx-auto text-center">
+          <div className="hairline mb-10" />
+          <blockquote className="font-display text-2xl md:text-4xl italic leading-snug">
+            „Az <span className="text-gold not-italic">IngatlanKockázat</span> célja, hogy Ön minden
+            fontos ingatlandöntést biztonságban, megfelelő információk birtokában és felesleges
+            kockázatok nélkül hozhassa meg."
+          </blockquote>
+          <div className="hairline mt-10 mb-10" />
+          <a
+            href="#kapcsolat"
+            className="inline-block px-8 py-4 rounded-full text-primary-foreground font-medium"
+            style={{ background: "var(--gradient-gold)", boxShadow: "var(--shadow-glow)" }}
+          >
+            Kérek személyes ajánlatot
+          </a>
+        </figure>
+      </div>
+    </section>
+  );
+}
 
 function References() {
   const items = [
