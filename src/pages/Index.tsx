@@ -4,14 +4,7 @@ import service3Url from "@/assets/service3.jpg";
 import service4Url from "@/assets/service4.jpg";
 import service5Url from "@/assets/service5.jpg";
 
-import {
-  Check,
-  MessageSquare,
-  Building2,
-  Paintbrush,
-  FileText,
-  ListChecks,
-} from "lucide-react";
+import { Packages } from "@/components/Packages";
 
 const services = [
   {
