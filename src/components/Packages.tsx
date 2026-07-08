@@ -155,11 +155,11 @@ export function Packages() {
                   <div
                     className={`absolute top-0 ${
                       isPremium ? "right-0" : "left-0"
-                    } px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.15em] text-primary-foreground bg-primary`}
+                    } px-5 py-2 text-[10px] font-bold uppercase tracking-[0.15em] text-primary-foreground bg-primary`}
                     style={{
                       clipPath: isPremium
-                        ? "polygon(0 0, 100% 0, 100% 100%, 12% 100%)"
-                        : "polygon(0 0, 100% 0, 88% 100%, 0 100%)",
+                        ? "polygon(0 0, 100% 0, 100% 100%, 10% 100%)"
+                        : "polygon(0 0, 100% 0, 90% 100%, 0 100%)",
                     }}
                   >
                     {pkg.label}
