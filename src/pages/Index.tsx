@@ -63,10 +63,10 @@ export default function Index() {
 
 function Nav() {
   return (
-    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/50">
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/50 h-20">
+      <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-3">
-          <img src={logoUrl} alt="Kockázatmentes Ingatlan logó" className="h-10 w-auto" />
+          <img src={logoUrl} alt="Kockázatmentes Ingatlan logó" className="h-16 w-auto" />
           <span className="font-display text-xl tracking-wide hidden sm:inline">
             <span className="text-gold">Kockázatmentes</span> Ingatlan
           </span>
@@ -398,7 +398,7 @@ function Footer() {
   return (
     <footer className="border-t border-border/50 py-10">
       <div className="max-w-6xl mx-auto px-6 flex flex-col items-center gap-6 text-sm text-muted-foreground">
-        <img src={logoUrl} alt="Kockázatmentes Ingatlan logó" className="h-24 md:h-32 w-auto" />
+        <img src={logoUrl} alt="Kockázatmentes Ingatlan logó" className="h-36 md:h-48 w-auto" />
         <div className="font-display text-lg">
           <span className="text-gold">Kockázatmentes</span> Ingatlan
         </div>
