@@ -5,6 +5,7 @@ import service4Url from "@/assets/service4.jpg";
 import service5Url from "@/assets/service5.jpg";
 
 import { Packages } from "@/components/Packages";
+import logoUrl from "@/assets/logo.png";
 
 const services = [
   {
