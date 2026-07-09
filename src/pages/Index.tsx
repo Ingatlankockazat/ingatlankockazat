@@ -397,11 +397,12 @@ function Contact() {
 function Footer() {
   return (
     <footer className="border-t border-border/50 py-10">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-4 items-center justify-between text-sm text-muted-foreground">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col items-center gap-6 text-sm text-muted-foreground">
+        <img src={logoUrl} alt="Kockázatmentes Ingatlan logó" className="h-24 md:h-32 w-auto" />
         <div className="font-display text-lg">
           <span className="text-gold">Kockázatmentes</span> Ingatlan
         </div>
-        <p>© {new Date().getFullYear()} Minden jog fenntartva. Független műszaki tanácsadás.</p>
+        <p className="text-center">© {new Date().getFullYear()} Minden jog fenntartva. Független műszaki tanácsadás.</p>
       </div>
     </footer>
   );
