@@ -398,7 +398,7 @@ function Footer() {
   return (
     <footer className="border-t border-border/50 py-10">
       <div className="max-w-6xl mx-auto px-6 flex flex-col items-center gap-6 text-sm text-muted-foreground">
-        <img src={logoUrl} alt="Kockázatmentes Ingatlan logó" className="h-24 md:h-32 w-auto" />
+        <img src={logoUrl} alt="Kockázatmentes Ingatlan logó" className="h-36 md:h-48 w-auto" />
         <div className="font-display text-lg">
           <span className="text-gold">Kockázatmentes</span> Ingatlan
         </div>
