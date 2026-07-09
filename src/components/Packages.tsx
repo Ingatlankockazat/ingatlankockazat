@@ -221,18 +221,18 @@ export function Packages() {
                         return (
                           <div
                             key={idx}
-                            className="flex items-center justify-between gap-1 text-sm"
+                            className="flex flex-col items-center gap-1 text-center"
                           >
                             <div className="flex items-center gap-2">
                               <PriceIcon
-                                className="w-5 h-5 text-primary shrink-0"
+                                className="w-4 h-4 text-primary shrink-0"
                                 strokeWidth={1.5}
                               />
-                              <span className="text-muted-foreground uppercase tracking-wider text-[10px] whitespace-nowrap">
+                              <span className="text-muted-foreground uppercase tracking-wider text-[10px]">
                                 {p.label}
                               </span>
                             </div>
-                            <span className="font-display text-sm text-gold whitespace-nowrap">
+                            <span className="font-display text-base md:text-lg text-gold leading-tight">
                               {p.value}
                             </span>
                           </div>
