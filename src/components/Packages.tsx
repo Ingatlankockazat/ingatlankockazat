@@ -199,9 +199,9 @@ export function Packages() {
                     <div className="flex flex-col items-center gap-3">
                       <div className="flex items-center gap-2 flex-wrap justify-center">
                         {pkg.singlePriceIcon && (
-                          <pkg.singlePriceIcon className="w-4 h-4 text-primary shrink-0" strokeWidth={1.5} />
+                          <pkg.singlePriceIcon className="w-6 h-6 text-primary shrink-0" strokeWidth={1.5} />
                         )}
-                        <span className="font-display text-base md:text-lg text-gold leading-tight text-center">
+                        <span className="font-display text-2xl md:text-3xl text-gold leading-tight text-center">
                           {pkg.singlePrice}
                         </span>
                       </div>
