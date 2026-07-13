@@ -65,18 +65,18 @@ const packages = [
     ],
   },
   {
-    title: "Felújítási koncepció",
-    icon: FileText,
-    desc: "Szakmai javaslati terv készítése, amely megmutatja a felújítás legjobb irányát.",
+    title: "Konfliktuskezelés, vitarendezés, tisztázó beszélgetés",
+    icon: Handshake,
+    desc: "Közvetítői, tárgyalói támogatás ingatlannal kapcsolatos feszült vagy vitás helyzetekben.",
     contents: [
-      "felújítási koncepció",
-      "műszaki javaslatok",
-      "munkafolyamatok sorrendje",
-      "költségtervezési irányelvek",
-      "megvalósítási ajánlások",
+      "tisztázó beszélgetés lebonyolítása",
+      "félreértések, ellentétek rendezése",
+      "vitás helyzetek szakmai közvetítése",
+      "megállapodás előkészítése",
+      "független szakmai álláspont kialakítása",
     ],
-    singlePriceIcon: FileText,
-    singlePrice: "EGYEDI AJÁNLAT ALAPJÁN",
+    singlePriceIcon: Scale,
+    singlePrice: "39 000 Ft / óra",
   },
   {
     label: "PRÉMIUM SZOLGÁLTATÁS",
@@ -108,6 +108,52 @@ const extras = [
   { icon: Handshake, label: "Mediáció és vitás helyzetek rendezése" },
   { icon: ShieldCheck, label: "Független szakmai képviselet" },
 ];
+
+function PriceBlock({ pkg }: { pkg: (typeof packages)[number] }) {
+  if (pkg.singlePrice) {
+    return (
+      <div className="flex items-center justify-center gap-2 flex-wrap">
+        {pkg.singlePriceIcon && (
+          <pkg.singlePriceIcon
+            className="w-6 h-6 text-primary shrink-0"
+            strokeWidth={1.5}
+          />
+        )}
+        <span className="font-display text-2xl md:text-3xl text-gold leading-tight text-center">
+          {pkg.singlePrice}
+        </span>
+      </div>
+    );
+  }
+
+  if (pkg.prices) {
+    return (
+      <div className="space-y-2">
+        {pkg.prices.map((p, idx) => {
+          const PriceIcon = p.icon;
+          return (
+            <div key={idx} className="flex flex-col items-center gap-1 text-center">
+              <div className="flex items-center gap-2">
+                <PriceIcon
+                  className="w-6 h-6 text-primary shrink-0"
+                  strokeWidth={1.5}
+                />
+                <span className="text-muted-foreground uppercase tracking-wider text-xs">
+                  {p.label}
+                </span>
+              </div>
+              <span className="font-display text-2xl md:text-3xl text-gold leading-tight">
+                {p.value}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+
+  return null;
+}
 
 export function Packages() {
   return (
@@ -148,7 +194,9 @@ export function Packages() {
                 }`}
                 style={{
                   animationDelay: `${i * 80}ms`,
-                  boxShadow: isPremium ? "0 0 80px -30px oklch(0.82 0.11 82 / 0.35)" : undefined,
+                  boxShadow: isPremium
+                    ? "0 0 80px -30px oklch(0.82 0.11 82 / 0.35)"
+                    : undefined,
                 }}
               >
                 {pkg.label && (
@@ -179,6 +227,11 @@ export function Packages() {
                 <h3 className="font-display text-xl md:text-2xl mb-3 leading-tight break-words">
                   {pkg.title}
                 </h3>
+
+                <div className="mb-5">
+                  <PriceBlock pkg={pkg} />
+                </div>
+
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
                   {pkg.desc}
                 </p>
@@ -194,53 +247,16 @@ export function Packages() {
                   ))}
                 </ul>
 
-                <div className="mt-auto border-t border-border/50 pt-5">
-                  {pkg.singlePrice ? (
-                    <div className="flex flex-col items-center gap-3">
-                      <div className="flex items-center gap-2 flex-wrap justify-center">
-                        {pkg.singlePriceIcon && (
-                          <pkg.singlePriceIcon className="w-6 h-6 text-primary shrink-0" strokeWidth={1.5} />
-                        )}
-                        <span className="font-display text-2xl md:text-3xl text-gold leading-tight text-center">
-                          {pkg.singlePrice}
-                        </span>
-                      </div>
-                      {pkg.cta && (
-                        <a
-                          href="#kapcsolat"
-                          className="block w-full py-3 rounded-lg bg-primary text-primary-foreground text-xs font-semibold uppercase tracking-wider transition hover:bg-primary/90"
-                        >
-                          {pkg.cta}
-                        </a>
-                      )}
-                    </div>
-                  ) : pkg.prices ? (
-                    <div className="space-y-3">
-                      {pkg.prices.map((p, idx) => {
-                        const PriceIcon = p.icon;
-                        return (
-                          <div
-                            key={idx}
-                            className="flex flex-col items-center gap-1 text-center"
-                          >
-                            <div className="flex items-center gap-2">
-                              <PriceIcon
-                                className="w-6 h-6 text-primary shrink-0"
-                                strokeWidth={1.5}
-                              />
-                              <span className="text-muted-foreground uppercase tracking-wider text-xs">
-                                {p.label}
-                              </span>
-                            </div>
-                            <span className="font-display text-2xl md:text-3xl text-gold leading-tight">
-                              {p.value}
-                            </span>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  ) : null}
-                </div>
+                {pkg.cta && (
+                  <div className="mt-auto border-t border-border/50 pt-5">
+                    <a
+                      href="#kapcsolat"
+                      className="block w-full py-3 rounded-lg bg-primary text-primary-foreground text-xs font-semibold uppercase tracking-wider transition hover:bg-primary/90"
+                    >
+                      {pkg.cta}
+                    </a>
+                  </div>
+                )}
               </article>
             );
           })}
