@@ -1,6 +1,6 @@
 import {
   Building2,
-  FileText,
+  
   Handshake,
   HardHat,
   Home,
