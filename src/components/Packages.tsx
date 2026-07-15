@@ -60,8 +60,8 @@ const packages = [
       "megvalósítási sorrend",
     ],
     prices: [
-      { icon: Building2, label: "LAKÁS", value: "350 000 Ft" },
-      { icon: Home, label: "CSALÁDI HÁZ", value: "550 000 Ft" },
+      { icon: Building2, label: "LAKÁS", value: "350 000 Ft-tól" },
+      { icon: Home, label: "CSALÁDI HÁZ", value: "550 000 Ft-tól" },
     ],
   },
   {
