@@ -45,7 +45,7 @@ const packages = [
     ],
     prices: [
       { icon: Building2, label: "LAKÁS", value: "150 000 Ft-tól" },
-      { icon: Home, label: "CSALÁDI HÁZ", value: "200 000 Ft-tuple" },
+      { icon: Home, label: "CSALÁDI HÁZ", value: "200 000 Ft-tól" },
     ],
   },
   {
