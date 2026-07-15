@@ -399,7 +399,7 @@ function Footer() {
     <footer className="border-t border-border/50 py-10">
       <div className="max-w-6xl mx-auto px-6 flex flex-col items-center gap-6 text-sm text-muted-foreground">
         <img src={logoUrl} alt="Kockázatmentes Ingatlan logó" className="h-36 md:h-48 w-auto" />
-        <div className="font-display text-lg">
+        <div className="font-display text-2xl">
           <span className="text-gold">Kockázatmentes</span> Ingatlan
         </div>
         <p className="text-center">© {new Date().getFullYear()} Minden jog fenntartva. Független műszaki tanácsadás.</p>
