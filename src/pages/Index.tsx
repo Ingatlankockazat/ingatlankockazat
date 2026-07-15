@@ -63,11 +63,11 @@ export default function Index() {
 
 function Nav() {
   return (
-    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/50 h-24">
-      <div className="max-w-6xl mx-auto px-6 h-24 flex items-center justify-between">
+    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/50 h-28">
+      <div className="max-w-6xl mx-auto px-6 h-28 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-4">
-          <img src={logoUrl} alt="Kockázatmentes Ingatlan logó" className="h-20 w-auto" />
-          <span className="font-display text-2xl tracking-wide hidden sm:inline">
+          <img src={logoUrl} alt="Kockázatmentes Ingatlan logó" className="h-24 w-auto" />
+          <span className="font-display text-3xl tracking-wide hidden sm:inline">
             <span className="text-gold">Kockázatmentes</span> Ingatlan
           </span>
         </a>
