@@ -9,7 +9,6 @@ const links = [
   { to: "/kapcsolat", label: "Kapcsolat" },
 ];
 
-const counters: Record<string, string> = { "/": "01 / 04", "/szolgaltatasok": "02 / 04", "/rolunk": "03 / 04", "/kapcsolat": "04 / 04" };
 
 export function SiteLayout() {
   const location = useLocation();
@@ -38,7 +37,7 @@ export function SiteLayout() {
     </header>
     <main><Outlet /></main>
     {location.pathname === "/kapcsolat" && <div className="closing-band"><div className="site-container">Vásárlás. Felújítás. Értékesítés. Bérlés. <span>Mielőtt döntesz, nézzük meg együtt.</span></div></div>}
-    <footer className="site-footer"><div className="site-container footer-row"><div>© 2026 Ingatlankockázat</div><div className="flex flex-wrap gap-5"><Link to="/adatkezeles">Adatkezelés</Link><Link to="/impresszum">Impresszum</Link></div>{counters[location.pathname] && <div className="page-counter">{counters[location.pathname]}</div>}</div></footer>
+    <footer className="site-footer"><div className="site-container footer-row"><div>© 2026 Ingatlankockázat</div><div className="flex flex-wrap gap-5"><Link to="/adatkezeles">Adatkezelés</Link><Link to="/impresszum">Impresszum</Link></div></div></footer>
   </div>;
 }
 
