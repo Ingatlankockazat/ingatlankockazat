@@ -5,4 +5,4 @@
 - [x] Verify desktop and mobile routes and interactions.
 - [x] Fix homepage image seams and closing-section alignment; widen process descriptions and verify all steps.
 - [x] Apply the October 6, 23:07 screenshot proportions to homepage and services page, including header styling; verify both pages at desktop, laptop and phone widths.
-- [ ] Compare all 11 original homepage references; reduce nonhero empty space while preserving the approved first slide.
+- [x] Compare all 11 original homepage references; reduce nonhero empty space while preserving the approved first slide. Verify all sections and selectors at desktop, laptop and phone widths.
