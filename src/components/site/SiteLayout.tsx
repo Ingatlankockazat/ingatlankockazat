@@ -24,7 +24,7 @@ export function SiteLayout() {
   return <div className="min-h-screen bg-background text-foreground">
     {location.pathname === "/" && <ReadingProgress />}
     <header className={`site-header ${scrolled || location.pathname !== "/" ? "site-header--solid" : ""}`}>
-      <div className="site-container flex h-20 items-center justify-between gap-6">
+      <div className="site-container header-row flex items-center justify-between gap-6">
         <Link to="/" className="wordmark" aria-label="Ingatlankockázat kezdőlap">ingatlankockázat</Link>
         <nav className="hidden lg:flex items-center gap-8" aria-label="Fő navigáció">
           {links.map(link => <NavLink key={link.to} to={link.to} end={link.to === "/"} className={({isActive}) => `nav-link ${isActive ? "nav-link--active" : ""}`}>{link.label}</NavLink>)}
