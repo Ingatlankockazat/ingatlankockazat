@@ -224,27 +224,29 @@
 
 /* Rólunk — a kezdőlap és szolgáltatások oldal arányaihoz igazítva */
 .rolunk-page .site-container{width:min(100% - 112px,1360px)}
-.rolunk-page .page-hero{padding:64px 0 40px}
+.rolunk-page .page-hero{padding:24px 0 32px}
 .rolunk-page .display-kicker{font-size:.78rem;letter-spacing:.2em;margin-bottom:1.25rem}
 .rolunk-page .page-hero h1{font-size:3rem;max-width:1000px;letter-spacing:0;line-height:1.15;margin-bottom:0}
-.rolunk-page .pill-row{margin-top:1.75rem;gap:.5rem}
+.rolunk-page .pill-row{margin-top:1.25rem;gap:.5rem}
 .rolunk-page .outline-pill{font-size:.875rem;padding:.55rem 1rem;letter-spacing:.06em}
-.rolunk-page .about-copy{padding-bottom:64px;font-size:1rem}
+.rolunk-page .about-copy{padding-bottom:8px;font-size:1rem}
 .rolunk-page .about-copy p+p{margin-top:1.25rem}
-.rolunk-page .section{padding:48px 0}
-.rolunk-page .section-heading{margin-bottom:0}
-.rolunk-page .section-heading .kicker{font-size:.78rem;letter-spacing:.2em;margin-bottom:1rem}
-.rolunk-page .section-heading h2{font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.2;margin-bottom:0}
-.rolunk-page .statement{font-size:clamp(1.25rem,2vw,1.6rem);margin-top:1.5rem}
-.rolunk-page .lead{font-size:1rem;line-height:1.6}
+.rolunk-page .about-indep{grid-template-columns:.9fr 1.1fr;border-top:1px solid var(--border)}
+.rolunk-page .about-indep .hx-indep-l,.rolunk-page .about-indep .hx-indep-r{padding:4rem 3rem}
+.rolunk-page .about-indep .hx-num-eyebrow{font-size:.78rem;letter-spacing:.2em;margin-bottom:1rem}
+.rolunk-page .about-indep h2{font-size:clamp(1.5rem,2.4vw,2.1rem);line-height:1.25;margin:0}
+.rolunk-page .about-indep .hx-indep-r h2{margin:0 0 1rem}
+.rolunk-page .about-indep .hx-emph{font:400 1.05rem/1.6 "Schibsted Grotesk";margin:0;color:rgba(241,234,224,.75)}
 @media(max-width:1100px){
  .rolunk-page .site-container{width:calc(100% - 80px)}
  .rolunk-page .page-hero h1{font-size:2.25rem}
+ .rolunk-page .about-indep .hx-indep-l,.rolunk-page .about-indep .hx-indep-r{padding:3rem 2rem}
 }
 @media(max-width:900px){
  .rolunk-page .site-container{width:calc(100% - 40px)}
- .rolunk-page .page-hero{padding:40px 0 32px}
- .rolunk-page .section{padding:40px 0}
+ .rolunk-page .page-hero{padding:16px 0 28px}
+ .rolunk-page .about-indep{grid-template-columns:1fr}
+ .rolunk-page .about-indep .hx-indep-l,.rolunk-page .about-indep .hx-indep-r{padding:2.5rem 1.5rem}
 }
 @media(max-width:640px){
  .rolunk-page .page-hero h1{font-size:1.5rem;overflow-wrap:normal;hyphens:auto}
