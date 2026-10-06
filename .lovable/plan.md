@@ -1,6 +1,24 @@
 # A kezdőlap pontos igazítása a 11 képernyőképhez
 
-A tartalom és a szövegek nagyrészt már egyeznek; a különbség főleg az elrendezésben és a hangsúlyokban van. Szakaszonként:
+A tartalom és a szövegek nagyrészt már egyeznek; a különbség főleg az elrendezésben és a hangsúlyokban van.
+
+A kezdőlap "diái" (teljes képernyős részei) ebben a sorrendben követik egymást:
+
+```text
+1. INGATLANKOCKÁZAT.HU      (nyitókép)
+2. MIELŐTT DÖNTESZ
+3. 01 A PROBLÉMA
+4. Idézet: "A mai magyar ingatlanpiacon egy laikus első nekifutásra
+   kevesebb információval rendelkezik, mint egy használt autó vásárlásakor."
+5. 02 MIT CSINÁLUNK?
+6. 03 A FOLYAMAT
+7. 04 SZOLGÁLTATÁSOK
+8. 05 ÉRTÉKNÖVELÉS
+9. 06 · FÜGGETLENSÉG
+10. MIELŐTT DÖNTESZ, NÉZZÜK MEG EGYÜTT.  (záró rész)
+```
+
+Minden dia legalább a képernyő magasságát kitölti, a tartalom függőlegesen középre kerül, és a diák között vékony elválasztó vonal van. Részletesen:
 
 1. **Fejléc** – bal oldalon narancs pötty + "INGATLANKOCKÁZAT" ritkított nagybetűvel; jobb oldalon a menüpontok, az aktív aláhúzva narancs vonallal; világos "Beszéljünk" gomb sötét, kerek nyíl ikonnal.
 2. **Nyitókép** – narancs ritkított "INGATLANKOCKÁZAT.HU" felirat; a cím két részre bontva: első mondat vékony, kisbetűs fehér; a második ("AZONBAN AZ ELSŐ BENYOMÁS…") félkövér, nagybetűs, narancs. Alatta a szürke mondat, majd a narancs "Felülvizsgáltatom az ingatlant →" gomb.
