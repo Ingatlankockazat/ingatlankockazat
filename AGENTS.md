@@ -13,3 +13,5 @@
 
 - Keep the public site as a React Router SPA with shared layout and route-level pages because GitHub Pages must serve every public route from one static Vite build.
 - Keep user-supplied website imagery bundled under `src/assets/redesign` because the same build must render without Lovable-only asset infrastructure on GitHub Pages.
+
+- Scope homepage proportion rules under `.home-page` and service proportion rules under `.services-page` so other route layouts remain independent.
