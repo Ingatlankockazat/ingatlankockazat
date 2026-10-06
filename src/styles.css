@@ -202,3 +202,14 @@
 .home-page .hx-what .hx-two{gap:40px}
 .home-page .hx-what .hx-lead{font-size:1rem;line-height:1.6}
 @media (max-width:640px){.home-page .hx-slide.hx-what{padding-block:36px}}
+
+/* 03 Folyamat + 04 Szolgáltatások: 02-höz igazított méretek */
+.home-page .hx-slide.hx-flow,.home-page .hx-slide.hx-svc{padding-block:48px}
+.home-page .hx-flow .hx-num-eyebrow,.home-page .hx-svc .hx-num-eyebrow{margin-bottom:16px}
+.home-page .hx-flow h2,.home-page .hx-svc h2{font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.2;margin-bottom:0}
+.home-page .hx-flow .hx-process{margin-top:24px}
+.home-page .hx-flow .hx-stage-copy h3{font-size:clamp(1.25rem,2vw,1.6rem)}
+.home-page .hx-flow .hx-stage-copy .hx-body{font-size:1rem;line-height:1.6}
+.home-page .hx-svc .hx-head-row{margin-bottom:24px}
+.home-page .hx-svc .hx-panel-left h3{font-size:clamp(1.25rem,2vw,1.6rem)}
+@media (max-width:640px){.home-page .hx-slide.hx-flow,.home-page .hx-slide.hx-svc{padding-block:36px}}
