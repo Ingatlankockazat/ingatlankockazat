@@ -36,7 +36,6 @@ export function SiteLayout() {
       {open && <nav className="mobile-menu" aria-label="Mobil navigáció">{links.map(link => <NavLink key={link.to} to={link.to} end={link.to === "/"} className={({isActive}) => `mobile-link ${isActive ? "text-accent" : ""}`}>{link.label}</NavLink>)}<Link className="button-primary justify-center" to="/kapcsolat">Beszéljünk →</Link></nav>}
     </header>
     <main><Outlet /></main>
-    {location.pathname === "/kapcsolat" && <div className="closing-band"><div className="site-container">Vásárlás. Felújítás. Értékesítés. Bérlés. <span>Mielőtt döntesz, nézzük meg együtt.</span></div></div>}
     <footer className="site-footer"><div className="site-container footer-row"><div>© 2026 Ingatlankockázat</div><div className="flex flex-wrap gap-5"><Link to="/adatkezeles">Adatkezelés</Link><Link to="/impresszum">Impresszum</Link></div></div></footer>
   </div>;
 }
