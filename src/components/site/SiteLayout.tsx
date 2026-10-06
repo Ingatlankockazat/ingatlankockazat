@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logoHeader from "@/assets/redesign/logo-header.png";
 
 const links = [
   { to: "/", label: "Kezdőlap" },
@@ -24,7 +25,7 @@ export function SiteLayout() {
     {location.pathname === "/" && <ReadingProgress />}
     <header className={`site-header ${scrolled || location.pathname !== "/" ? "site-header--solid" : ""}`}>
       <div className="site-container header-row flex items-center justify-between gap-6">
-        <Link to="/" className="wordmark" aria-label="Ingatlankockázat kezdőlap">ingatlankockázat</Link>
+        <Link to="/" className="header-logo-link" aria-label="Ingatlankockázat kezdőlap"><img src={logoHeader} alt="Ingatlankockázat" className="header-logo" /></Link>
         <nav className="hidden lg:flex items-center gap-8" aria-label="Fő navigáció">
           {links.map(link => <NavLink key={link.to} to={link.to} end={link.to === "/"} className={({isActive}) => `nav-link ${isActive ? "nav-link--active" : ""}`}>{link.label}</NavLink>)}
         </nav>
