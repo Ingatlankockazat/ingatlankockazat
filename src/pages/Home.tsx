@@ -28,7 +28,8 @@ const steps = [
 const servicePanels = [
  {tab:"Vevői oldal",title:"Mielőtt megveszed.",cta:"Vásárlás előtt →",items:["Vásárlás előtti műszaki felmérés","Ingatlankockázat-felmérés","Dokumentáció és tervrajzok áttekintése","Várható felújítási költségek felmérése","Befektetési célú ingatlan szakmai értékelése","Döntéstámogatás"]},
  {tab:"Eladói oldal",title:"Mielőtt piacra lépsz.",cta:"Eladás előtt →",items:["Eladás előtti műszaki állapotfelmérés","Problémák és kockázatok feltárása","Felújítási és értéknövelési javaslatok","Felújítás koordinációja","Értékesítés előtti felkészítés","Értékesítési támogatás"]},
- {tab:"Bérlői oldal",title:"Mielőtt aláírod.",cta:"Bérlés előtt →",items:["Bérlés előtti állapotfelmérés","Műszaki problémák feltárása","Használhatósági szempontok vizsgálata","Dokumentáció áttekintése","Döntéstámogatás"]}
+ {tab:"Bérlői oldal",title:"Mielőtt aláírod.",cta:"Bérlés előtt →",items:["Bérlés előtti állapotfelmérés","Műszaki problémák feltárása","Használhatósági szempontok vizsgálata","Dokumentáció áttekintése","Döntéstámogatás"]},
+ {tab:"Bérbeadói oldal",title:"Mielőtt bérbe adod.",cta:"Bérbeadás előtt →",items:["Bérlő kiválasztása és ellenőrzése","Bérleti szerződés ellenőrzése","Kaució és fizetési feltételek ellenőrzése","Átadás-átvétel dokumentálása","Közüzemi elszámolások ellenőrzése","Karbantartási és kárrendezési ügyek kezelése"]}
 ];
 
 export default function Home() {
