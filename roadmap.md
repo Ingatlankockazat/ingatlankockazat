@@ -6,3 +6,4 @@
 - [x] Fix homepage image seams and closing-section alignment; widen process descriptions and verify all steps.
 - [x] Apply the October 6, 23:07 screenshot proportions to homepage and services page, including header styling; verify both pages at desktop, laptop and phone widths.
 - [x] Compare all 11 original homepage references; reduce nonhero empty space while preserving the approved first slide. Verify all sections and selectors at desktop, laptop and phone widths.
+- [ ] Reconnect ingatlankockazat.hu to Lovable: user adds A record @ → 185.158.133.1 and TXT _lovable record at dns24.hu (Rackhost), then verifies in Project Settings → Domains.
