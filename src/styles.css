@@ -207,7 +207,8 @@
  .home-page .hx-slide.hx-problem{padding-block:40px 0}
  .home-page .hx-problem-copy{max-width:100%}
  .home-page .hx-problem:after{width:100%;height:280px;margin-top:24px;background-position:center 60%}
- .home-page .hx-cta-body{min-height:0;padding:48px 0 0}
+ .home-page .hx-cta-bar{display:none}
+ .home-page .hx-cta-body{min-height:0;padding:48px 0 0;border-top:0}
  .home-page .hx-indep-l,.home-page .hx-indep-r{padding-block:40px}
 }
 @media(max-width:640px){
