@@ -20,3 +20,4 @@
 - [x] Bring the phone hero lead back after the orange sentence, then set both hero sentences one size smaller; verify phone and desktop.
 - [x] Push the phone white sentence down and restore the phone orange sentence to its original size; verify phone and desktop.
 - [x] Remove the hanging lamp from the mobile hero image only and verify the original desktop image remains.
+- [x] Make the "Vásárlás · Felújítás · Értékesítés · Bérlés" dots thick circles centered between the words and center the line on phones; verify phone and desktop.
