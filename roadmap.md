@@ -8,3 +8,4 @@
 - [x] Compare all 11 original homepage references; reduce nonhero empty space while preserving the approved first slide. Verify all sections and selectors at desktop, laptop and phone widths.
 - [x] Add mobile swipe cues (arrows, hint, edge fades) to the homepage process step menu; verify at desktop, tablet and phone widths.
 - [x] Reconnect ingatlankockazat.hu to Lovable: DNS now points to 185.158.133.1 with the verification record in place; domain is Active and primary, www redirects to it, and the live site was verified on desktop and phone.
+- [x] Move the process step arrows beside the step tabs at the same level on phones and drop the swipe caption; verify at desktop and phone widths.
