@@ -346,3 +346,4 @@
 .home-page .hx-stage{grid-area:1/1;margin:0;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease,visibility 0s linear .5s;pointer-events:none;animation:none}
 .home-page .hx-stage.active{opacity:1;visibility:visible;transform:none;transition:opacity .5s ease,transform .5s ease;pointer-events:auto}
 }
+@media (max-width:900px){:root{--font-body-mobile:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--font-sans:var(--font-body-mobile)}body,p,li,small,input,textarea,select{font-family:var(--font-body-mobile)}.package-price small,.package-card .button-secondary,.hx-small-eyebrow,.hx-rail button span,.hx-seg button,.site-header .nav-link,.site-header .button-primary,.services-page .extras-cta .button-secondary,.rolunk-page .about-indep .hx-emph,.home-page .hero.hx-slide .hero-content{font-family:var(--font-body-mobile)!important}}
