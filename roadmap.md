@@ -17,3 +17,4 @@
 - [x] Drop the domain kicker from the phone first slide, lift the white sentence and lower the orange sentence; verify phone and desktop.
 - [x] Lower the phone orange sentence clear of the background lamp glow while keeping the button above the fold; verify phone and desktop.
 - [x] Hide the phone hero lead, restore original accent sizes on the phone first slide via unmodified font copies, lower the orange sentence further and set the white sentence one size smaller; verify phone and desktop.
+- [x] Bring the phone hero lead back after the orange sentence, then set both hero sentences one size smaller; verify phone and desktop.
