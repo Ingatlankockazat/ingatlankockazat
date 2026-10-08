@@ -23,3 +23,4 @@
 - [x] Make the "Vásárlás · Felújítás · Értékesítés · Bérlés" dots thick circles centered between the words and center the line on phones; verify phone and desktop.
 - [x] Enlarge the phone contact photo, let the contact card overlap only its lower part and hang slightly below, and keep the tile email break clean at every width; verify phone and desktop.
 - [x] Remove the contact page photo, keep only the contact card (compact, aligned with the heading); verify phone and desktop.
+- kapcsolat: névjegykártya üveg stílus (translucent gradient + blur + sheen + rim), hátsó halk meleg izzás, mobilon feljebb (gap 18px)
