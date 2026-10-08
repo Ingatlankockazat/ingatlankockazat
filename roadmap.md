@@ -11,3 +11,4 @@
 - [x] Move the process step arrows beside the step tabs at the same level on phones and drop the swipe caption; verify at desktop and phone widths.
 - [x] Replace the phone metric-card rocking motion with a gentle forward-lean (scale and depth) and verify at phone width.
 - [x] Remove the orange bar above the closing section on phones while keeping it on desktop; verify both widths.
+- [x] Remove the orange reading-progress line at the top of the screen and the stray seam above the phone metric cards; verify at phone width.
