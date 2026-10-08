@@ -348,3 +348,5 @@
 }
 @media (max-width:900px){:root{--font-body-mobile:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--font-sans:var(--font-body-mobile)}body,p,li,small,input,textarea,select{font-family:var(--font-body-mobile)}.package-price small,.package-card .button-secondary,.hx-small-eyebrow,.hx-rail button span,.hx-seg button,.site-header .nav-link,.site-header .button-primary,.services-page .extras-cta .button-secondary,.rolunk-page .about-indep .hx-emph,.home-page .hero.hx-slide .hero-content{font-family:var(--font-body-mobile)!important}}
 @media (max-width:900px){.home-page .hx-problem .hx-acc-item>p{min-height:calc(var(--hx-acc-lines,5) * 1.6em);line-height:1.6}}
+/* Keep the original desktop photo; use the retouched lamp-free photo on phones. */
+@media (max-width:900px){.home-page .hero.hx-slide:before{background-image:url("./assets/redesign/hero-mobile.jpg")}}
