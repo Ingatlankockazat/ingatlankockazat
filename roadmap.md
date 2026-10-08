@@ -10,3 +10,4 @@
 - [x] Reconnect ingatlankockazat.hu to Lovable: DNS now points to 185.158.133.1 with the verification record in place; domain is Active and primary, www redirects to it, and the live site was verified on desktop and phone.
 - [x] Move the process step arrows beside the step tabs at the same level on phones and drop the swipe caption; verify at desktop and phone widths.
 - [x] Replace the phone metric-card rocking motion with a gentle forward-lean (scale and depth) and verify at phone width.
+- [x] Remove the orange bar above the closing section on phones while keeping it on desktop; verify both widths.
