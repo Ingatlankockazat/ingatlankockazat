@@ -316,3 +316,10 @@
   .home-page .hx-cta-copy .button-light{display:inline-flex}
 }
 @media (prefers-reduced-motion:reduce){.home-page .hx-stats>div,.home-page .button-primary,.home-page .button-light{animation:none!important}}
+
+@media (max-width:900px){
+  .home-page .hx-acc-item.active{border-left:2px solid var(--accent);padding-left:.85rem}
+  .home-page .hx-acc-item button{padding-left:.85rem}
+  .home-page .hx-acc-item p{min-height:3.4rem;animation:hxAccIn .5s ease both}
+}
+@keyframes hxAccIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
