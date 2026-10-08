@@ -15,3 +15,4 @@
 - [x] Make the phone footer narrower with centered text lines; verify phone and desktop widths.
 - [x] Auto-cycle the "Mi segítünk feltárni" list on phones, pausing on tap; verify phone and desktop behavior.
 - [x] Drop the domain kicker from the phone first slide, lift the white sentence and lower the orange sentence; verify phone and desktop.
+- [x] Lower the phone orange sentence clear of the background lamp glow while keeping the button above the fold; verify phone and desktop.
