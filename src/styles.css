@@ -355,6 +355,6 @@
 }
 @media(max-width:900px){
 .contact-visual img{aspect-ratio:4/5;max-height:min(440px,70svh)}
-.contact-card{top:100%;bottom:auto;left:1rem;right:1rem;transform:translateY(-50%)}
-.contact-page .contact-hero{padding-bottom:8.5rem}
+.contact-card{top:auto;bottom:-4.5rem;left:1rem;right:1rem}
+.contact-page .contact-hero{padding-bottom:7rem}
 }
