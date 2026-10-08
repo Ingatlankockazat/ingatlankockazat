@@ -301,7 +301,7 @@
 .contact-tiles svg{width:20px;height:20px;margin-bottom:.75rem}
 .contact-tiles .tile-kicker{font-size:.66rem;letter-spacing:.18em}
 .contact-tiles strong{font-size:1.05rem;line-height:1.2}
-.contact-tiles small{font-size:.82rem;line-height:1.45;overflow-wrap:anywhere}
+.contact-tiles small{font-size:.82rem;line-height:1.45;overflow-wrap:normal}
 .contact-visual{align-self:center}
 .contact-visual img{min-height:0;height:auto;max-height:min(560px,74svh);width:100%}
 .contact-grid{gap:4vw}
