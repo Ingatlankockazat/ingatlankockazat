@@ -302,8 +302,8 @@
 .contact-tiles .tile-kicker{font-size:.66rem;letter-spacing:.18em}
 .contact-tiles strong{font-size:1.05rem;line-height:1.2}
 .contact-tiles small{font-size:.82rem;line-height:1.45;overflow-wrap:normal}
-.contact-visual{align-self:center;position:static;display:block}
-.contact-grid{gap:4vw}
+.contact-visual{align-self:start;position:static;display:block}
+.contact-grid{gap:4vw;align-items:start}
 .contact-page .contact-intro{margin-bottom:5svh}
 @media(max-width:1100px){.contact-tiles{grid-template-columns:1fr;max-width:420px}.contact-tiles>a{flex-direction:row;align-items:center;gap:1rem;padding:1rem 1.25rem}.contact-tiles svg{margin-bottom:0;flex:none}.contact-tiles>a>div{display:flex;flex-direction:column;gap:.15rem;min-width:0}}
 @media(max-width:900px){.contact-page .contact-hero h1{font-size:clamp(2rem,8vw,2.6rem)}}
