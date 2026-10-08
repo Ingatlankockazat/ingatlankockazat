@@ -12,3 +12,4 @@
 - [x] Replace the phone metric-card rocking motion with a gentle forward-lean (scale and depth) and verify at phone width.
 - [x] Remove the orange bar above the closing section on phones while keeping it on desktop; verify both widths.
 - [x] Remove the orange reading-progress line at the top of the screen and the stray seam above the phone metric cards; verify at phone width.
+- [x] Make the phone footer narrower with centered text lines; verify phone and desktop widths.
