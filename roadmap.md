@@ -14,3 +14,4 @@
 - [x] Remove the orange reading-progress line at the top of the screen and the stray seam above the phone metric cards; verify at phone width.
 - [x] Make the phone footer narrower with centered text lines; verify phone and desktop widths.
 - [x] Auto-cycle the "Mi segítünk feltárni" list on phones, pausing on tap; verify phone and desktop behavior.
+- [x] Drop the domain kicker from the phone first slide, lift the white sentence and lower the orange sentence; verify phone and desktop.
