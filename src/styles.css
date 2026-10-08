@@ -349,3 +349,6 @@
 @media (max-width:900px){.home-page .hx-problem .hx-acc-item>p{min-height:calc(var(--hx-acc-lines,5) * 1.6em);line-height:1.6}}
 /* Keep the original desktop photo; use the retouched lamp-free photo on phones. */
 @media (max-width:900px){.home-page .hero.hx-slide:before{background-image:url("./assets/redesign/hero-mobile.jpg")}}
+@media (max-width:900px){
+.home-page .hx-before .hx-tagline{flex-wrap:nowrap;font-size:.72rem;letter-spacing:.08em;column-gap:.45rem;margin-top:1.1rem}
+}
