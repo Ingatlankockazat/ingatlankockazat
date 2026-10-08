@@ -353,3 +353,8 @@
 .home-page .hx-before .hx-tagline{flex-wrap:nowrap;justify-content:center;font-size:.72rem;letter-spacing:.08em;column-gap:.5rem;margin-top:1.1rem}
 .home-page .hx-before .hx-tagline em{width:.56em;height:.56em}
 }
+@media(max-width:900px){
+.contact-visual img{aspect-ratio:4/5;max-height:min(440px,70svh)}
+.contact-card{top:100%;bottom:auto;left:1rem;right:1rem;transform:translateY(-50%)}
+.contact-page .contact-hero{padding-bottom:8.5rem}
+}
