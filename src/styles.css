@@ -340,7 +340,7 @@
 @media(max-width:900px){.home-page .hx-seg button,.hx-seg button{font-family:"Schibsted Grotesk Orig",sans-serif}}
 /* Flow stage: stabil magasság + cross-fade mobilon (ne ugráljon az oldal lépésváltáskor) */
 .home-page .hx-stage-list{display:contents}
-.home-page .hx-stage-list .hx-stage:not(.active){display:none}
+@media (min-width:901px){.home-page .hx-stage-list .hx-stage:not(.active){display:none}}
 @media (max-width:900px){
 .home-page .hx-stage-list{display:grid}
 .home-page .hx-stage{grid-area:1/1;margin:0;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease,visibility 0s linear .5s;pointer-events:none;animation:none}
