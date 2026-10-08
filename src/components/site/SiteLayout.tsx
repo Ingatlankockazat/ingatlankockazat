@@ -22,7 +22,6 @@ export function SiteLayout() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return <div className="min-h-screen bg-background text-foreground">
-    {location.pathname === "/" && <ReadingProgress />}
     <header className={`site-header ${scrolled || location.pathname !== "/" ? "site-header--solid" : ""}`}>
       <div className="site-container header-row flex items-center justify-between gap-6">
         <Link to="/" className="header-logo-link" aria-label="Ingatlankockázat kezdőlap"><img src={logoHeader} alt="Ingatlankockázat" className="header-logo" /></Link>
@@ -41,11 +40,6 @@ export function SiteLayout() {
   </div>;
 }
 
-function ReadingProgress() {
-  const [width, setWidth] = useState(0);
-  useEffect(() => { const update = () => { const total = document.documentElement.scrollHeight - window.innerHeight; setWidth(total > 0 ? Math.min(100, window.scrollY / total * 100) : 0); }; update(); window.addEventListener("scroll", update, { passive: true }); return () => window.removeEventListener("scroll", update); }, []);
-  return <div className="reading-progress" style={{ width: `${width}%` }} />;
-}
 
 export function SectionHeading({ kicker, title, lead, className = "" }: { kicker: string; title: string; lead?: string; className?: string }) {
   return <div className={`section-heading reveal ${className}`}><p className="kicker">{kicker}</p><h2>{title}</h2>{lead && <p className="lead">{lead}</p>}</div>;
