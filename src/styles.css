@@ -358,3 +358,4 @@
 .contact-card{top:auto;bottom:-4rem;left:1rem;right:1rem}
 .contact-page .contact-hero{padding-bottom:8rem}
 }
+@media(min-width:1101px){.contact-tiles small{font-size:clamp(.7rem,.89vw + 1.7px,.82rem)}}
