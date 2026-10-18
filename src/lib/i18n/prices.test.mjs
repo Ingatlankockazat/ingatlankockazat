@@ -4,10 +4,10 @@ import { fallbackEuroRate, parseEuroRate, translateWithPrices } from "./prices.t
 describe("English EUR service prices", () => {
   test.each([
     ["50 000 Ft‑tól", "From €137.71"],
-    ["70 000 Ft‑tól", "From €192.80"],
+    ["70 000 Ft‑tól", "From €192.79"],
     ["150 000 Ft‑tól", "From €413.13"],
     ["200 000 Ft‑tól", "From €550.84"],
-    ["350 000 Ft‑tól", "From €963.98"],
+    ["350 000 Ft‑tól", "From €963.97"],
     ["550 000 Ft‑tól", "From €1,514.82"],
     ["1 200 000 Ft‑tól", "From €3,305.06"],
     ["39 000 Ft", "€107.41"],
@@ -21,14 +21,14 @@ describe("English EUR service prices", () => {
   });
   test("converts both prices embedded in homepage process text", () => {
     expect(translateWithPrices("Első megtekintés · Lakás 50 000 Ft‑tól / Ház 70 000 Ft‑tól", "en", 363.08))
-      .toBe("First viewing · Apartment from €137.71 / House from €192.80");
+      .toBe("First viewing · Apartment from €137.71 / House from €192.79");
   });
   test("new rates change the EUR value without changing the HUF source", () => {
     expect(translateWithPrices("39 000 Ft", "en", 390)).toBe("€100.00");
   });
   test("keeps free and individually quoted services", () => {
-    expect(translateWithPrices("Díjmentes", "en", 363.08)).toBe("Free");
-    expect(translateWithPrices("Egyedi ajánlat", "en", 363.08)).toBe("Individual quote");
+    expect(translateWithPrices("Díjmentes", "en", 363.08)).toBe("Free of charge");
+    expect(translateWithPrices("Egyedi ajánlat", "en", 363.08)).toBe("Bespoke quote");
   });
   test("accepts a valid current rate and rejects invalid responses", () => {
     expect(parseEuroRate({ base: "EUR", date: "2026-10-16", rates: { HUF: 363.08 } })).toEqual(fallbackEuroRate);
