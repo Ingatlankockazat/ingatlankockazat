@@ -35,3 +35,4 @@
 - [x] Enlarge the phone contact photo, let the contact card overlap only its lower part and hang slightly below, and keep the tile email break clean at every width; verify phone and desktop.
 - [x] Remove the contact page photo, keep only the contact card (compact, aligned with the heading); verify phone and desktop.
 - kapcsolat: névjegykártya üveg stílus (translucent gradient + blur + sheen + rim), hátsó halk meleg izzás, mobilon feljebb (gap 18px)
+- [x] Make the desktop contact card taller and let it break past the photo's left and bottom edges without touching the tiles; verify desktop widths and phone.
