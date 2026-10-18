@@ -1,6 +1,6 @@
 # Redesign roadmap
 
-- [ ] Add WhatsApp to the English initial consultation and round EUR prices upwards to the next EUR 50; verify both languages.
+- [x] Add WhatsApp to the English initial consultation and round EUR prices upwards to the next EUR 50; verify both languages.
 
 - [x] Convert all English service prices to EUR using the latest available exchange rate; preserve Hungarian HUF prices and verify language switching.
 
