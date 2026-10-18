@@ -1,5 +1,7 @@
 # Redesign roadmap
 
+- [ ] Review and polish all live English copy, use construction experience and unexpected surprises, and normalise body-text i-dots; verify public pages in both layouts.
+
 - [x] Translate every public page into natural English and add a header language switch; verify both languages and layouts.
 - [x] Use "Property Support" as the English brand name in the title, header lockup and footer; verify both languages at desktop and phone widths.
 
