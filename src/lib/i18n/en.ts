@@ -120,7 +120,7 @@ export const english: Record<string, string> = {
   "Karbantartási és kárrendezési ügyek kezelése": "Handling maintenance and damage claims",
   "ingatlankockázat.hu": "Property Support",
   "Egy ingatlan lehet gyönyörű, és tűnhet jó befektetésnek.": "A property can look beautiful and seem like a great investment.",
-  "Azonban az első benyomás után érhetnek meglepetések.": "But first impressions can hide unexpected problems.",
+  "Azonban az első benyomás után érhetnek meglepetések.": "But first impressions can hide unpleasant surprises.",
   "Szembejöhetnek olyan problémák, amiket elsőre nem veszel észre.": "Problems may emerge that you would never spot at first glance.",
   "Felülvizsgáltatom az ingatlant →": "Arrange a property assessment →",
   "Mielőtt döntesz": "Before you decide",
