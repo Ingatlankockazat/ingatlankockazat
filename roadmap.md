@@ -1,5 +1,7 @@
 # Redesign roadmap
 
+- [ ] Convert all English service prices to EUR using the latest available exchange rate; preserve Hungarian HUF prices and verify language switching.
+
 - [x] Review and polish all live English copy, use construction experience and unpleasant surprises, and normalise body-text i-dots; verify all six public pages at desktop and phone widths.
 
 - [x] Translate every public page into natural English and add a header language switch; verify both languages and layouts.
