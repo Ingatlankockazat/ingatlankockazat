@@ -3,14 +3,14 @@ import { fallbackEuroRate, parseEuroRate, translateWithPrices } from "./prices.t
 
 describe("English EUR service prices", () => {
   test.each([
-    ["50 000 Ft‑tól", "From €137.71"],
-    ["70 000 Ft‑tól", "From €192.79"],
-    ["150 000 Ft‑tól", "From €413.13"],
-    ["200 000 Ft‑tól", "From €550.84"],
-    ["350 000 Ft‑tól", "From €963.97"],
-    ["550 000 Ft‑tól", "From €1,514.82"],
-    ["1 200 000 Ft‑tól", "From €3,305.06"],
-    ["39 000 Ft", "€107.41"],
+    ["50 000 Ft‑tól", "From €150"],
+    ["70 000 Ft‑tól", "From €200"],
+    ["150 000 Ft‑tól", "From €450"],
+    ["200 000 Ft‑tól", "From €600"],
+    ["350 000 Ft‑tól", "From €1,000"],
+    ["550 000 Ft‑tól", "From €1,550"],
+    ["1 200 000 Ft‑tól", "From €3,350"],
+    ["39 000 Ft", "€150"],
   ])("converts %s at the verified latest rate", (input, output) => {
     expect(translateWithPrices(input, "en", fallbackEuroRate.hufPerEuro)).toBe(output);
   });
@@ -21,10 +21,14 @@ describe("English EUR service prices", () => {
   });
   test("converts both prices embedded in homepage process text", () => {
     expect(translateWithPrices("Első megtekintés · Lakás 50 000 Ft‑tól / Ház 70 000 Ft‑tól", "en", 363.08))
-      .toBe("First viewing · Apartment from €137.71 / House from €192.79");
+      .toBe("First viewing · Apartment from €150 / House from €200");
   });
   test("new rates change the EUR value without changing the HUF source", () => {
-    expect(translateWithPrices("39 000 Ft", "en", 390)).toBe("€100.00");
+    expect(translateWithPrices("39 000 Ft", "en", 390)).toBe("€100");
+  });
+  test("rounds upwards to EUR 50 without increasing exact multiples", () => {
+    expect(translateWithPrices("50 000 Ft‑tól", "en", 365)).toBe("From €150");
+    expect(translateWithPrices("50 000 Ft‑tól", "en", 1000)).toBe("From €50");
   });
   test("keeps free and individually quoted services", () => {
     expect(translateWithPrices("Díjmentes", "en", 363.08)).toBe("Free of charge");

@@ -17,8 +17,8 @@ export function translateWithPrices(text: string, language: Language, hufPerEuro
   if (language === "hu") return text;
   const translated = english[text] ?? text;
   const format = (amount: string) => new Intl.NumberFormat("en-IE", {
-    style: "currency", currency: "EUR", minimumFractionDigits: 2, maximumFractionDigits: 2,
-  }).format(Number(amount.replace(/[,\s\u00a0\u202f]/g, "")) / hufPerEuro);
+    style: "currency", currency: "EUR", minimumFractionDigits: 0, maximumFractionDigits: 0,
+  }).format(Math.ceil(Number(amount.replace(/[,\s\u00a0\u202f]/g, "")) / hufPerEuro / 50) * 50);
   return translated
     .replace(/HUF\s+([\d][\d,\s\u00a0\u202f]*\d|\d)/g, (_, amount: string) => format(amount))
     .replace(/([\d][\d\s\u00a0\u202f]*\d|\d)\s*Ft(?:[‑-]tól)?/g, (match, amount: string) => `${match.includes("tól") ? "From " : ""}${format(amount)}`)
