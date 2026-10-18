@@ -1,6 +1,6 @@
 # Redesign roadmap
 
-- [ ] Clarify the requested English copy, remove the services exchange-rate note and duplicate English About label; verify English and Hungarian pages.
+- [x] Clarify the requested English copy, remove the services exchange-rate note and duplicate English About label; verify English and Hungarian pages.
 
 - [x] Add WhatsApp to the English initial consultation and round EUR prices upwards to the next EUR 50; verify both languages.
 
