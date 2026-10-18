@@ -324,5 +324,7 @@ export const english: Record<string, string> = {
   "Projektmenedzsment": "Project management",
   "Ha megveszed": "If you buy",
   "Jogaid": "Your rights",
-  "Jogorvoslat": "Complaints and remedies"
+  "Jogorvoslat": "Complaints and remedies",
+  "Kép": "Image",
+  "Felújítás előtti és utáni állapot": "Property before and after renovation"
 };
