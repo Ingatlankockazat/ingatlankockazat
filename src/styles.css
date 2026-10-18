@@ -379,6 +379,7 @@
   .contact-visual{position:relative;align-self:stretch;display:flex;min-height:620px}
   .contact-visual .contact-photo{position:absolute;inset:0;width:100%;height:100%;min-height:0;object-fit:cover;border-radius:8px}
   .contact-visual::before{content:"";position:absolute;inset:0;z-index:1;border-radius:8px;background:linear-gradient(180deg,rgba(13,10,9,.16) 0%,rgba(13,10,9,.42) 58%,rgba(13,10,9,.62) 100%)}
-  .contact-visual .contact-card{position:relative;z-index:2;align-self:flex-end;margin:2.5rem;width:min(420px,calc(100% - 5rem))}
+  .contact-visual .contact-card{position:relative;z-index:2;align-self:flex-end;margin:2.5rem 2.5rem 2.5rem -12%;width:min(470px,calc(100% - 2.5rem));min-height:min(380px,64%);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(1.75rem,2.4vw,2.4rem) clamp(1.9rem,2.6vw,2.6rem)}
+  .contact-visual .contact-card .contact-card-details{margin-top:auto;padding-top:1.6rem;gap:.5rem}
 }
 @media(max-width:900px){.contact-photo{display:none}}
