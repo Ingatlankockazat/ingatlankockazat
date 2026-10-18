@@ -30,7 +30,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       "/impresszum": ["Impresszum", "Legal notice"],
     };
     const name = names[location.pathname] ?? names["/"];
-    const title = `Ingatlankockázat – ${name[language === "en" ? 1 : 0]}`;
+    const brand = language === "en" ? "Property Support" : "Ingatlankockázat";
+    const title = `${brand} – ${name[language === "en" ? 1 : 0]}`;
     const description = language === "en"
       ? "Independent property assessments, renovation planning and project support in Budapest and Pest County. Get the full picture before you decide."
       : "Mielőtt döntesz, nézzük meg együtt. Vásárlás előtti műszaki felmérés, felújítás tervezése és koordinációja, értékesítési támogatás. Budapest és Pest megye.";
