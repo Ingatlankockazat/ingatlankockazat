@@ -252,7 +252,7 @@ export const english: Record<string, string> = {
   "Vásárlás. Felújítás. Értékesítés. Bérlés.": "Buying. Renovating. Selling. Renting.",
   "Pádár Attila": "Attila Pádár",
   "info@ingatlankockazat.hu": "info@ingatlankockazat.hu",
-  "H–P 8:00–18:00 · Budapest &amp; Pest megye": "Mon–Fri 08:00–18:00 · Budapest & Pest County",
+  "H–P 8:00–18:00 · Budapest & Pest megye": "Mon–Fri 08:00–18:00 · Budapest & Pest County",
   "Adatkezelési tájékoztató": "Privacy notice",
   "Ez a tájékoztató bemutatja, hogyan kezeljük a személyes adataidat, amikor felveszed velünk a kapcsolatot, vagy igénybe veszed a szolgáltatásainkat.": "This notice explains how we handle your personal data when you contact us or use our services.",
   "Az adatkezelő": "Data controller",
