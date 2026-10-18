@@ -1,5 +1,7 @@
 # Redesign roadmap
 
+- [x] Clarify the requested English copy, remove the services exchange-rate note and duplicate English About label; verify English and Hungarian pages.
+
 - [x] Add WhatsApp to the English initial consultation and round EUR prices upwards to the next EUR 50; verify both languages.
 
 - [x] Convert all English service prices to EUR using the latest available exchange rate; preserve Hungarian HUF prices and verify language switching.
