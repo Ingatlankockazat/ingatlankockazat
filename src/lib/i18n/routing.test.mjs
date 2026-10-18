@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { languageFromSearch, localisedPath } from "./routing";
+import { languageFromSearch, localisedPath } from "./routing.ts";
 describe("language routing", () => {
   test("Hungarian remains the default", () => {
     expect(languageFromSearch("")).toBe("hu");
