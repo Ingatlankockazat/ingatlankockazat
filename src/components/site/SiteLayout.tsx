@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoHeader from "@/assets/redesign/logo-header.png";
+import logoMark from "@/assets/redesign/logo-mark.png";
 import { useLanguage } from "@/lib/i18n/Language";
 import { localisedPath } from "@/lib/i18n/routing";
 
@@ -27,7 +28,7 @@ export function SiteLayout() {
   return <div className="min-h-screen bg-background text-foreground">
     <header className={`site-header ${scrolled || location.pathname !== "/" ? "site-header--solid" : ""}`}>
       <div className="site-container header-row flex items-center justify-between gap-6">
-        <Link to={path("/")} className="header-logo-link" aria-label={tr("Ingatlankockázat kezdőlap")}><img src={logoHeader} alt={tr("Ingatlankockázat")} className="header-logo" /></Link>
+        <Link to={path("/")} className="header-logo-link" aria-label={tr("Ingatlankockázat kezdőlap")}>{language === "en" ? <span className="header-lockup"><img src={logoMark} alt="" className="header-mark" /><span className="header-wordmark"><span className="hw-a">Property</span><span className="hw-b">Support</span></span></span> : <img src={logoHeader} alt={tr("Ingatlankockázat")} className="header-logo" />}</Link>
         <nav className="hidden lg:flex items-center gap-8" aria-label={tr("Fő navigáció")}>
           {links.map(link => <NavLink key={link.to} to={path(link.to)} end={link.to === "/"} className={({isActive}) => `nav-link ${isActive ? "nav-link--active" : ""}`}>{tr(link.label)}</NavLink>)}
         </nav>
