@@ -358,3 +358,11 @@
 @media(max-width:900px){
 }
 @media(min-width:1101px){.contact-tiles small{font-size:clamp(.7rem,.89vw + 1.7px,.82rem)}}
+
+/* Compact language selection beside the contact action. */
+.language-switch{display:flex;align-items:center;gap:.35rem;flex-shrink:0;font-family:var(--font-sans);font-size:.75rem;line-height:1;letter-spacing:0}
+.language-switch a{display:grid;place-items:center;min-width:32px;min-height:40px;color:var(--foreground);opacity:.55;border-bottom:2px solid transparent;transition:opacity .2s,border-color .2s}
+.language-switch a[aria-current="true"]{opacity:1;border-color:var(--accent)}
+.language-switch a:hover{opacity:1}
+.language-switch a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(max-width:640px){.header-row{gap:.5rem}.header-row>div{gap:.35rem}.header-logo-link{min-width:0}.site-header .header-logo{max-width:100%;object-fit:contain}.language-switch{gap:0}.language-switch a{min-width:28px}}

@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoHeader from "@/assets/redesign/logo-header.png";
+import { useLanguage } from "@/lib/i18n/Language";
+import { localisedPath } from "@/lib/i18n/routing";
 
 const links = [
   { to: "/", label: "Kezdőlap" },
@@ -12,6 +14,7 @@ const links = [
 
 
 export function SiteLayout() {
+  const { language, tr, path } = useLanguage();
   const location = useLocation();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -24,19 +27,20 @@ export function SiteLayout() {
   return <div className="min-h-screen bg-background text-foreground">
     <header className={`site-header ${scrolled || location.pathname !== "/" ? "site-header--solid" : ""}`}>
       <div className="site-container header-row flex items-center justify-between gap-6">
-        <Link to="/" className="header-logo-link" aria-label="Ingatlankockázat kezdőlap"><img src={logoHeader} alt="Ingatlankockázat" className="header-logo" /></Link>
-        <nav className="hidden lg:flex items-center gap-8" aria-label="Fő navigáció">
-          {links.map(link => <NavLink key={link.to} to={link.to} end={link.to === "/"} className={({isActive}) => `nav-link ${isActive ? "nav-link--active" : ""}`}>{link.label}</NavLink>)}
+        <Link to={path("/")} className="header-logo-link" aria-label={tr("Ingatlankockázat kezdőlap")}><img src={logoHeader} alt="Ingatlankockázat" className="header-logo" /></Link>
+        <nav className="hidden lg:flex items-center gap-8" aria-label={tr("Fő navigáció")}>
+          {links.map(link => <NavLink key={link.to} to={path(link.to)} end={link.to === "/"} className={({isActive}) => `nav-link ${isActive ? "nav-link--active" : ""}`}>{tr(link.label)}</NavLink>)}
         </nav>
         <div className="flex items-center gap-3">
-          <Link className="button-primary hidden sm:inline-flex" to="/kapcsolat">Beszéljünk <span>→</span></Link>
-          <button className="icon-button lg:hidden" aria-label={open ? "Menü bezárása" : "Menü megnyitása"} onClick={() => setOpen(value => !value)}>{open ? <X /> : <Menu />}</button>
+          <Link className="button-primary hidden sm:inline-flex" to={path("/kapcsolat")}>{tr("Beszéljünk")} <span>→</span></Link>
+          <button className="icon-button lg:hidden" aria-label={tr(open ? "Menü bezárása" : "Menü megnyitása")} onClick={() => setOpen(value => !value)}>{open ? <X /> : <Menu />}</button>
+          <nav className="language-switch" aria-label={language === "en" ? "Language" : "Nyelv"}>{(["hu", "en"] as const).map(lang => <Link key={lang} to={localisedPath(location.pathname + location.search + location.hash, lang)} replace preventScrollReset lang={lang} aria-label={lang === "hu" ? "Magyar" : "English"} aria-current={language === lang ? "true" : undefined}>{lang.toUpperCase()}</Link>)}</nav>
         </div>
       </div>
-      {open && <nav className="mobile-menu" aria-label="Mobil navigáció">{links.map(link => <NavLink key={link.to} to={link.to} end={link.to === "/"} className={({isActive}) => `mobile-link ${isActive ? "text-accent" : ""}`}>{link.label}</NavLink>)}<Link className="button-primary justify-center" to="/kapcsolat">Beszéljünk →</Link></nav>}
+      {open && <nav className="mobile-menu" aria-label={tr("Mobil navigáció")}>{links.map(link => <NavLink key={link.to} to={path(link.to)} end={link.to === "/"} className={({isActive}) => `mobile-link ${isActive ? "text-accent" : ""}`}>{tr(link.label)}</NavLink>)}<Link className="button-primary justify-center" to={path("/kapcsolat")}>{tr("Beszéljünk →")}</Link></nav>}
     </header>
     <main><Outlet /></main>
-    <footer className="site-footer"><div className="site-container footer-row"><div>© 2026 Ingatlankockázat</div><div className="flex flex-wrap gap-5"><Link to="/adatkezeles">Adatkezelés</Link><Link to="/impresszum">Impresszum</Link></div></div></footer>
+    <footer className="site-footer"><div className="site-container footer-row"><div>© 2026 Ingatlankockázat</div><div className="flex flex-wrap gap-5"><Link to={path("/adatkezeles")}>{tr("Adatkezelés")}</Link><Link to={path("/impresszum")}>{tr("Impresszum")}</Link></div></div></footer>
   </div>;
 }
 
