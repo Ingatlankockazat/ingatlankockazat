@@ -1,24 +1,41 @@
-import { createContext, useContext, useEffect, useMemo, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import { Link, useLocation, useSearchParams, type LinkProps } from "react-router-dom";
-import { english } from "./en";
+import { euroRateUrl, fallbackEuroRate, parseEuroRate, translateWithPrices } from "./prices";
 import { languageFromSearch, localisedPath, type Language } from "./routing";
 
-const LanguageContext = createContext({ language: "hu" as Language, tr: (text: string) => text, path: (to: string) => to, setLanguage: (_language: Language) => {} });
+const LanguageContext = createContext({ language: "hu" as Language, euroRate: fallbackEuroRate, tr: (text: string) => text, path: (to: string) => to, setLanguage: (_language: Language) => {} });
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const location = useLocation();
   const [, setSearchParams] = useSearchParams();
   const language = languageFromSearch(location.search);
+  const [euroRate, setEuroRate] = useState(fallbackEuroRate);
+  useEffect(() => {
+    if (language !== "en") return;
+    const controller = new AbortController();
+    fetch(euroRateUrl, { signal: controller.signal })
+      .then(response => {
+        if (!response.ok) throw new Error("Exchange rate unavailable");
+        return response.json();
+      })
+      .then(data => {
+        const rate = parseEuroRate(data);
+        if (rate) setEuroRate(rate);
+      })
+      .catch(() => { /* Retain the last verified reference rate if offline. */ });
+    return () => controller.abort();
+  }, [language]);
   const value = useMemo(() => ({
     language,
-    tr: (text: string) => language === "en" ? english[text] ?? text : text,
+    euroRate,
+    tr: (text: string) => translateWithPrices(text, language, euroRate.hufPerEuro),
     path: (to: string) => localisedPath(to, language),
     setLanguage: (next: Language) => setSearchParams(previous => {
       const params = new URLSearchParams(previous);
       if (next === "en") params.set("lang", "en"); else params.delete("lang");
       return params;
     }, { replace: true, preventScrollReset: true }),
-  }), [language, setSearchParams]);
+  }), [language, euroRate, setSearchParams]);
   useEffect(() => {
     document.documentElement.lang = language;
     const names: Record<string, [string, string]> = {
