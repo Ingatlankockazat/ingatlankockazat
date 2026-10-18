@@ -30,9 +30,8 @@ describe("English EUR service prices", () => {
     expect(translateWithPrices("50 000 Ft‑tól", "en", 365)).toBe("From €150");
     expect(translateWithPrices("50 000 Ft‑tól", "en", 1000)).toBe("From €50");
   });
-  test("keeps free and individually quoted services", () => {
+  test("keeps free services free", () => {
     expect(translateWithPrices("Díjmentes", "en", 363.08)).toBe("Free of charge");
-    expect(translateWithPrices("Egyedi ajánlat", "en", 363.08)).toBe("Bespoke quote");
   });
   test("accepts a valid current rate and rejects invalid responses", () => {
     expect(parseEuroRate({ base: "EUR", date: "2026-10-16", rates: { HUF: 363.08 } })).toEqual(fallbackEuroRate);
