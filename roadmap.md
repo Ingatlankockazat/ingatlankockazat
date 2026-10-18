@@ -1,5 +1,7 @@
 # Redesign roadmap
 
+- [x] Translate every public page into natural English and add a header language switch; verify both languages and layouts.
+
 - [x] Build six-route editorial website from the approved brief.
 - [x] Add all supplied imagery and interactive home sections.
 - [x] Verify desktop and mobile routes and interactions.
