@@ -37,4 +37,5 @@
 - kapcsolat: névjegykártya üveg stílus (translucent gradient + blur + sheen + rim), hátsó halk meleg izzás, mobilon feljebb (gap 18px)
 - [x] Place the desktop contact card at the bottom of the photo, horizontally centred, size unchanged; verify desktop and phone widths.
 - [x] Show the About page copy before the portrait on phones; verify both languages at phone and desktop widths.
+- [x] Add the owner name and role caption under the About page portrait in both languages (English name order first name then surname); verify phone and desktop.
 
