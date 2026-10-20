@@ -36,4 +36,5 @@
 - [x] Remove the contact page photo, keep only the contact card (compact, aligned with the heading); verify phone and desktop.
 - kapcsolat: névjegykártya üveg stílus (translucent gradient + blur + sheen + rim), hátsó halk meleg izzás, mobilon feljebb (gap 18px)
 - [x] Place the desktop contact card at the bottom of the photo, horizontally centred, size unchanged; verify desktop and phone widths.
+- [x] Show the About page copy before the portrait on phones; verify both languages at phone and desktop widths.
 
