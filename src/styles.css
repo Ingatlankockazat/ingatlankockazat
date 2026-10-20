@@ -386,4 +386,4 @@
 .rolunk-page .about-split .about-copy{max-width:none;padding-bottom:0;width:auto}
 .rolunk-page .about-portrait{margin:0;position:sticky;top:110px}
 .rolunk-page .about-portrait img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;border-radius:8px;border:1px solid var(--border)}
-@media (max-width:900px){.rolunk-page .about-split{grid-template-columns:1fr;gap:2rem;padding-bottom:40px}.rolunk-page .about-portrait{position:static;order:-1;width:min(100%,360px);margin:0 auto}}
+@media (max-width:900px){.rolunk-page .about-split{grid-template-columns:1fr;gap:2rem;padding-bottom:40px}.rolunk-page .about-portrait{position:static;order:1;width:min(100%,360px);margin:0 auto}}
