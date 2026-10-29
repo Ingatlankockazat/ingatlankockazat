@@ -93,7 +93,7 @@
 .site-header .header-logo-link{display:inline-flex;align-items:center}
 .site-header .header-logo{display:block;height:52px;width:auto}
 @media(max-width:640px){.site-header .header-logo{height:42px}}
-.site-header nav[aria-label="Fő navigáció"]{margin-left:auto}
+.site-header .header-nav{margin-left:auto}
 .site-header .nav-link{font-family:var(--font-sans);font-size:.875rem;text-transform:none;letter-spacing:0;padding:1.6rem 0}
 .site-header .nav-link:after{bottom:1.2rem}
 .site-header .button-primary{background:var(--foreground);border-color:var(--foreground);color:var(--deep);font-family:var(--font-sans);text-transform:none;letter-spacing:0;font-size:.875rem;font-weight:500;gap:.75rem;padding:.65rem .65rem .65rem 1.25rem}
