@@ -1,4 +1,5 @@
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
+import { AlertDialog, AlertDialogAction, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { useLanguage, LanguageLink as Link } from "@/lib/i18n/Language";
 
@@ -57,6 +58,8 @@ export default function LeadForm() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [done, setDone] = useState(false);
+  const [contactPrompt, setContactPrompt] = useState(false);
+  const phoneRef = useRef<HTMLInputElement>(null);
 
   const questions = [...(byTopic[topic] ?? []), ...common];
 
@@ -73,6 +76,7 @@ export default function LeadForm() {
     e.preventDefault();
     setError("");
     const emailOk = email === "" || /^\S+@\S+\.\S+$/.test(email);
+    if (!phone.trim() && !email.trim()) { setContactPrompt(true); return; }
     if (!name.trim() || (phone.replace(/\D/g, "").length < 6 && !email.trim()) || !emailOk) {
       setError(tr("Add meg a neved, és legalább egy telefonszámot vagy e-mail címet.")); return;
     }
