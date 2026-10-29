@@ -36,12 +36,12 @@ async function notifyTelegram(b: z.infer<typeof BodySchema>, submitted: boolean)
   const chatId = Deno.env.get('TELEGRAM_CHAT_ID')
   if (!token || !chatId) { console.error('telegram not configured'); return }
   const source = b.page.includes('ingatlan-atvilagitas') ? 'Kampányoldal' : 'Kapcsolat oldal'
-  const lines = [
+  const lines: (string | null)[] = [
     submitted ? '✅ <b>Elküldött érdeklődés</b>' : '🟠 <b>Új érdeklődő (még nem küldte el)</b>',
     '',
     `<b>Név:</b> ${esc(b.name)}`,
-    b.phone ? `<b>Telefon:</b> ${esc(b.phone)}` : '',
-    b.email ? `<b>E-mail:</b> ${esc(b.email)}` : '',
+    b.phone ? `<b>Telefon:</b> ${esc(b.phone)}` : null,
+    b.email ? `<b>E-mail:</b> ${esc(b.email)}` : null,
     `<b>Téma:</b> ${esc(b.topic)}`,
     `<b>Forrás:</b> ${source} (${b.language.toUpperCase()})`,
   ]
@@ -52,7 +52,7 @@ async function notifyTelegram(b: z.infer<typeof BodySchema>, submitted: boolean)
     const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: chatId, text: lines.filter((l, i) => l !== '' || i === 1 || lines[i - 1] !== '').join('\n'), parse_mode: 'HTML' }),
+      body: JSON.stringify({ chat_id: chatId, text: lines.filter((l) => l !== null).join('\n'), parse_mode: 'HTML' }),
     })
     if (!res.ok) console.error('telegram send failed', res.status, await res.text())
   } catch (e) { console.error('telegram error', String(e)) }
