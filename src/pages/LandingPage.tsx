@@ -37,6 +37,7 @@ export default function LandingPage() {
   }, [language]);
 
   const toForm = () => document.getElementById("erdeklodom")?.scrollIntoView({ behavior: "smooth" });
+  const from = (huf: string) => tr(huf).replace(/^From /, "from ");
 
   const risks = [
     [t("Rejtett nedvesség és penész", "Hidden damp and mould"), t("Friss festés alatt is ott lehet. A javítása gyakran milliókba kerül.", "It can hide under a fresh coat of paint, and fixing it often runs into thousands.")],
