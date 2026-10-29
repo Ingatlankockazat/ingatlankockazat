@@ -1,4 +1,5 @@
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
+import { AlertDialog, AlertDialogAction, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { useLanguage, LanguageLink as Link } from "@/lib/i18n/Language";
 
@@ -57,6 +58,8 @@ export default function LeadForm() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [done, setDone] = useState(false);
+  const [contactPrompt, setContactPrompt] = useState(false);
+  const phoneRef = useRef<HTMLInputElement>(null);
 
   const questions = [...(byTopic[topic] ?? []), ...common];
 
@@ -73,6 +76,7 @@ export default function LeadForm() {
     e.preventDefault();
     setError("");
     const emailOk = email === "" || /^\S+@\S+\.\S+$/.test(email);
+    if (!phone.trim() && !email.trim()) { setContactPrompt(true); return; }
     if (!name.trim() || (phone.replace(/\D/g, "").length < 6 && !email.trim()) || !emailOk) {
       setError(tr("Add meg a neved, és legalább egy telefonszámot vagy e-mail címet.")); return;
     }
@@ -148,7 +152,7 @@ export default function LeadForm() {
                   <h3>{tr("Hol érünk el?")}</h3>
                   <label className="lead-field"><span>{tr("Név")}</span><input value={name} onChange={e => setName(e.target.value)} maxLength={100} autoComplete="name" required /></label>
                   <div className="lead-two">
-                    <label className="lead-field"><span>{tr("Telefon")}</span><input value={phone} onChange={e => setPhone(e.target.value)} maxLength={40} type="tel" autoComplete="tel" inputMode="tel" /></label>
+                    <label className="lead-field"><span>{tr("Telefon")}</span><input ref={phoneRef} value={phone} onChange={e => setPhone(e.target.value)} maxLength={40} type="tel" autoComplete="tel" inputMode="tel" /></label>
                     <label className="lead-field"><span>Email</span><input value={email} onChange={e => setEmail(e.target.value)} maxLength={255} type="email" autoComplete="email" /></label>
                   </div>
                   <input className="lead-hp" tabIndex={-1} autoComplete="off" aria-hidden="true" value={website} onChange={e => setWebsite(e.target.value)} />
@@ -158,6 +162,17 @@ export default function LeadForm() {
                     <button type="submit" className="button-primary" disabled={busy}>{tr("Kérem, hogy keressenek")}<ArrowRight /></button>
                   </div>
                   <p className="lead-fine">{tr("Elérhetőségeidet kizárólag az ingatlanoddal kapcsolatos megkereséshez használjuk.")} <Link to="/adatkezeles">{tr("Adatkezelési tájékoztató")}</Link></p>
+                  <AlertDialog open={contactPrompt} onOpenChange={setContactPrompt}>
+                    <AlertDialogContent className="lead-prompt" onCloseAutoFocus={e => { e.preventDefault(); phoneRef.current?.focus(); }}>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle>{tr("Hogyan érhetünk el?")}</AlertDialogTitle>
+                        <AlertDialogDescription>{tr("Add meg a telefonszámod vagy az e-mail-címed.")}</AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogAction className="button-primary">{tr("Rendben")}</AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
                 </form>
               )}
 
