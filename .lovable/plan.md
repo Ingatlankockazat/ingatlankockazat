@@ -1,7 +1,7 @@
 # Telegram-értesítés minden érdeklődőről
 
 ## Mit kapsz
-Minden alkalommal Telegram-üzenet érkezik a telefonodra, amikor valaki kitölti az „Érdeklődöm” űrlapot:
+Minden alkalommal Telegram-üzenet érkezik, amikor valaki kitölti az „Érdeklődöm” űrlapot:
 - a magyar és az angol Kapcsolat oldalon,
 - a rejtett kampányoldalon magyarul és angolul.
 
@@ -9,17 +9,17 @@ Kétféle üzenet jön:
 - **Félbehagyott:** „Új érdeklődő (még nem küldte el)”: név, telefon, e-mail, téma, oldal, nyelv.
 - **Elküldött:** „Elküldött érdeklődés”: ugyanezek, plusz a válaszok, az üzenet és a kampányforrás.
 
-Egy érdeklődőről a félbehagyott üzenet csak egyszer jön. Az elküldöttről is csak egy üzenet jön, így nem kapsz ismétlődő értesítéseket.
+Egy érdeklődőről a félbehagyott és az elküldött üzenet is csak egyszer jön.
 
-## Amit neked kell megtenned (kb. 3 perc)
-1. **Most, a saját telefonodon:** a Telegramban írj a **@BotFather**-nek, küldd el a `/newbot` parancsot, és adj nevet a botnak. Ezt bárki megcsinálhatja, nem kell hozzá a másik telefon.
-2. Amikor a beállító ablak megjelenik, kösd be a botot a Telegram-csatlakozóval (a kapott tokent kéri).
-3. **Később, a másik telefonon:** keresd meg a botot a nevéről, és küldj neki egy „Szia” üzenetet. Ebből tudja a rendszer, hova küldje az értesítéseket. Ha szólsz, hogy megvan, bekötöm. Amíg ez nem történik meg, a leadek ugyanúgy mentődnek.
-- Ha később több telefonra is kéred az üzeneteket: hozz létre egy Telegram-csoportot, tedd bele a botot, és a csoport minden tagja megkapja az értesítést.
+## Hol tartunk
+1. A bot elkészült, a kulcsa el van mentve.
+2. **Még hiányzik:** a másik telefonon keresd meg a botot a nevéről, és küldj neki egy „Szia” üzenetet. Utána szólj nekem, és összekötöm a két telefont. Ha ez megvan, egy próbaüzenetet is küldök.
+- Addig minden lead ugyanúgy mentődik, csak üzenet nem megy ki.
+- Ha később több telefonra is kéred az üzeneteket, hozz létre egy Telegram-csoportot, és tedd bele a botot.
 
 ## Technical details
-- Connect the Telegram connector (gateway) to the project.
-- After step 3, read the chat id with `getUpdates` and store it as the `TELEGRAM_CHAT_ID` secret.
-- In `lead-capture`, after a successful upsert, call the gateway `sendMessage` (HTML, escaped values). Send when the status first becomes partial, or when it changes to submitted (based on the existing status read). Notification failures are logged and do not block saving the lead.
-- Include the page source (contact vs campaign) and UTM data if the payload already carries them; otherwise add an optional `source` field from the two forms.
-- Deploy and test with one real partial and one submitted lead.
+- Use the saved `TELEGRAM_BOT_TOKEN` secret and call the Bot API directly (`https://api.telegram.org/bot<token>/sendMessage`) from the `lead-capture` function. No connector is needed.
+- Store the recipient chat id as the `TELEGRAM_CHAT_ID` secret. Read it with `getUpdates` after the "Szia" message, using a one-off call from the sandbox.
+- After a successful upsert, send the message (HTML, escaped values) when the status first becomes partial, or when it changes to submitted (based on the existing status read). If `TELEGRAM_CHAT_ID` is missing or the send fails, log it and still save the lead.
+- Add an optional `source` field (contact / campaign), and UTM data where available, from both forms.
+- Deploy, then test one partial lead and one submitted lead.
