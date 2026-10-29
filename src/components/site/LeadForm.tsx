@@ -71,7 +71,7 @@ export default function LeadForm() {
     const res = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json", apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY },
-      body: JSON.stringify({ id, stage, topic, answers: merged, name, phone, email, message, consentMarketing: marketing, consentVersion: CONSENT_VERSION, language, website }),
+      body: JSON.stringify({ id, stage, topic, answers: merged, name, phone, email, message, consentMarketing: marketing, consentVersion: CONSENT_VERSION, language, website, page: window.location.pathname }),
     });
     if (!res.ok) throw new Error(String(res.status));
   }
