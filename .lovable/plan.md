@@ -5,9 +5,9 @@ Ma a "Kérem, hogy keressenek" gomb csak egy kis piros sort mutat, ha nincs tele
 ## Mit lát a látogató
 - Ha sem telefonszámot, sem e-mail-címet nem adott meg, és a "Kérem, hogy keressenek" gombra kattint, felugrik egy kis ablak:
   - Cím: "Hogyan érhetünk el?"
-  - Szöveg: "Add meg a telefonszámod vagy az e-mail-címed, hogy vissza tudjunk hívni."
+  - Szöveg: "Add meg a telefonszámod vagy az e-mail-címed."
   - Gomb: "Rendben" – bezárja az ablakot, és a telefon mezőbe ugrik a kurzor.
-- Angolul: "How can we reach you?" / "Please add your phone number or email address so we can get back to you." / "OK".
+- Angolul: "How can we reach you?" / "Please add your phone number or email address." / "OK".
 - Az ablak az oldal sötét, üveges stílusát követi, számítógépen és telefonon is.
 - Hiányzó név vagy hibás e-mail-cím esetén továbbra is a mostani kis hibaüzenet marad.
 
