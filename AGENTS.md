@@ -18,3 +18,4 @@
 - Keep localisation in a shared language context and bundled dictionaries, selected by the `lang` query parameter and preserved in internal links; this keeps every language compatible with the same static SPA routes without duplicating page layouts.
 - Convert service prices centrally during localisation using the public ECB-based Frankfurter rate and retaining a dated verified fallback; this keeps all public prices consistent without a server or changing their HUF source amounts.
 - Store contact-form enquiries only through the lead-capture backend function (service role, no browser table access) because the static build must stay keyless and visitors must never read enquiries.
+- Keep campaign landing pages as unlinked SPA routes that set their own head tags and use the minimal header, so ads and Google can reach them without them appearing in site navigation.
