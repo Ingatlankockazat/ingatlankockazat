@@ -38,6 +38,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }), [language, euroRate, setSearchParams]);
   useEffect(() => {
     document.documentElement.lang = language;
+    if (location.pathname === "/ingatlan-atvilagitas") return; // the landing page sets its own head tags
     const names: Record<string, [string, string]> = {
       "/": ["Kezdőlap", "Independent property advice"],
       "/szolgaltatasok": ["Szolgáltatások", "Services and packages"],

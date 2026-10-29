@@ -64,10 +64,14 @@ export default function LeadForm() {
   const questions = [...(byTopic[topic] ?? []), ...common];
 
   async function send(stage: "partial" | "submitted") {
+    let attribution: Record<string, string> = {};
+    try { attribution = JSON.parse(sessionStorage.getItem("ik-attribution") || "{}"); } catch { /* ignore */ }
+    const page = window.location.pathname.replace(import.meta.env.BASE_URL.replace(/\/$/, ""), "") || "/";
+    const merged = Object.fromEntries(Object.entries({ ...answers, Oldal: page, ...attribution }).slice(0, 12));
     const res = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json", apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY },
-      body: JSON.stringify({ id, stage, topic, answers, name, phone, email, message, consentMarketing: marketing, consentVersion: CONSENT_VERSION, language, website }),
+      body: JSON.stringify({ id, stage, topic, answers: merged, name, phone, email, message, consentMarketing: marketing, consentVersion: CONSENT_VERSION, language, website }),
     });
     if (!res.ok) throw new Error(String(res.status));
   }
