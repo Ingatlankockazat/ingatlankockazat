@@ -39,7 +39,7 @@ export function SiteLayout() {
           {links.map(link => <NavLink key={link.to} to={path(link.to)} end={link.to === "/"} className={({isActive}) => `nav-link ${isActive ? "nav-link--active" : ""}`}>{tr(link.label)}</NavLink>)}
         </nav>}
         <div className="flex items-center gap-3">
-          {minimal ? <a className="button-primary hidden sm:inline-flex" href="tel:+36309039630">+36 30 903 9630</a> : <Link className="button-primary hidden sm:inline-flex" to={path("/kapcsolat")}>{tr("Beszéljünk")} <span>→</span></Link>}
+          {!minimal && <Link className="button-primary hidden sm:inline-flex" to={path("/kapcsolat")}>{tr("Beszéljünk")} <span>→</span></Link>}
           {!minimal && <button className="icon-button header-burger" aria-label={tr(open ? "Menü bezárása" : "Menü megnyitása")} onClick={() => setOpen(value => !value)}>{open ? <X /> : <Menu />}</button>}
           <nav className="language-switch" aria-label={language === "en" ? "Language" : "Nyelv"}>{(["hu", "en"] as const).map(lang => <Link key={lang} to={localisedPath(location.pathname + location.search + location.hash, lang)} replace preventScrollReset lang={lang} aria-label={lang === "hu" ? "Magyar" : "English"} aria-current={language === lang ? "true" : undefined}>{lang.toUpperCase()}</Link>)}</nav>
         </div>
