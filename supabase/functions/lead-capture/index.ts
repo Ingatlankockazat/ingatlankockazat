@@ -17,6 +17,7 @@ const BodySchema = z.object({
   consentVersion: text(40).min(1),
   language: z.enum(['hu', 'en']),
   website: z.string().max(0).optional().default(''), // honeypot
+  page: text(120).optional().default(''),
 }).refine((b) => b.phone.length >= 6 || b.email.length > 0, { message: 'phone or email required' })
 
 const hits = new Map<string, number[]>()
@@ -26,6 +27,35 @@ function limited(ip: string) {
   recent.push(now)
   hits.set(ip, recent)
   return recent.length > 20
+}
+
+const esc = (v: string) => v.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+
+async function notifyTelegram(b: z.infer<typeof BodySchema>, submitted: boolean) {
+  const token = Deno.env.get('TELEGRAM_BOT_TOKEN')
+  const chatId = Deno.env.get('TELEGRAM_CHAT_ID')
+  if (!token || !chatId) { console.error('telegram not configured'); return }
+  const source = b.page.includes('ingatlan-atvilagitas') ? 'Kampányoldal' : 'Kapcsolat oldal'
+  const lines: (string | null)[] = [
+    submitted ? '✅ <b>Elküldött érdeklődés</b>' : '🟠 <b>Új érdeklődő (még nem küldte el)</b>',
+    '',
+    `<b>Név:</b> ${esc(b.name)}`,
+    b.phone ? `<b>Telefon:</b> ${esc(b.phone)}` : null,
+    b.email ? `<b>E-mail:</b> ${esc(b.email)}` : null,
+    `<b>Téma:</b> ${esc(b.topic)}`,
+    `<b>Forrás:</b> ${source} (${b.language.toUpperCase()})`,
+  ]
+  const answers = Object.entries(b.answers)
+  if (answers.length) lines.push('', ...answers.map(([k, v]) => `• ${esc(k)}: ${esc(v)}`))
+  if (submitted && b.message) lines.push('', `<b>Üzenet:</b> ${esc(b.message)}`)
+  try {
+    const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: chatId, text: lines.filter((l) => l !== null).join('\n'), parse_mode: 'HTML' }),
+    })
+    if (!res.ok) console.error('telegram send failed', res.status, await res.text())
+  } catch (e) { console.error('telegram error', String(e)) }
 }
 
 const json = (data: unknown, status = 200) =>
@@ -70,6 +100,9 @@ Deno.serve(async (req) => {
     return json({ error: 'save failed' }, 500)
   }
 
-  // Owner notifications are sent here once the email domain is verified.
+  const isNew = !existing && status === 'partial'
+  const becameSubmitted = status === 'submitted' && existing?.status !== 'submitted'
+  if (isNew || becameSubmitted) await notifyTelegram(b, becameSubmitted)
+
   return json({ ok: true, status })
 })
