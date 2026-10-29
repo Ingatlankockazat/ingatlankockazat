@@ -100,7 +100,7 @@ export default function LeadForm() {
         <div className="lead-intro">
           <p className="display-kicker">{tr("Érdeklődöm")}</p>
           <h2>{tr("Mondd el, hol tartasz.")}</h2>
-          <p>{tr("Néhány kattintás, és már az első beszélgetésre felkészülten hívunk vissza.")}</p>
+          <p>{tr("Válaszolj néhány rövid kérdésre, hogy már az első beszélgetésre felkészülten keressünk.")}</p>
         </div>
         <div className="lead-card">
           {done ? (
