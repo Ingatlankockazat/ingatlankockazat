@@ -12,9 +12,10 @@ Kétféle üzenet jön:
 Egy érdeklődőről a félbehagyott üzenet csak egyszer jön. Az elküldöttről is csak egy üzenet jön, így nem kapsz ismétlődő értesítéseket.
 
 ## Amit neked kell megtenned (kb. 3 perc)
-1. A Telegramban írj a **@BotFather**-nek, küldd el a `/newbot` parancsot, és adj nevet a botnak.
+1. **Most, a saját telefonodon:** a Telegramban írj a **@BotFather**-nek, küldd el a `/newbot` parancsot, és adj nevet a botnak. Ezt bárki megcsinálhatja, nem kell hozzá a másik telefon.
 2. Amikor a beállító ablak megjelenik, kösd be a botot a Telegram-csatlakozóval (a kapott tokent kéri).
-3. Küldj egy „Szia” üzenetet a saját botodnak. Ebből tudom, hova küldje az értesítéseket.
+3. **Később, a másik telefonon:** keresd meg a botot a nevéről, és küldj neki egy „Szia” üzenetet. Ebből tudja a rendszer, hova küldje az értesítéseket. Ha szólsz, hogy megvan, bekötöm. Amíg ez nem történik meg, a leadek ugyanúgy mentődnek.
+- Ha később több telefonra is kéred az üzeneteket: hozz létre egy Telegram-csoportot, tedd bele a botot, és a csoport minden tagja megkapja az értesítést.
 
 ## Technical details
 - Connect the Telegram connector (gateway) to the project.
