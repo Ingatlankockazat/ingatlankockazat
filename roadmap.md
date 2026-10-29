@@ -1,6 +1,6 @@
 # Redesign roadmap
 
-- [ ] Resolve the approved SEO guide finding: publishable inspection guide, services link, sitemap and verification.
+- [x] Resolve the approved SEO guide finding: publishable inspection guide, services link, sitemap and verification.
 
 - [x] Clarify the requested English copy, remove the services exchange-rate note and duplicate English About label; verify English and Hungarian pages.
 
