@@ -329,7 +329,6 @@ export const english: Record<string, string> = {
   "Kép": "Image",
   "Felújítás előtti és utáni állapot": "Property before and after renovation",
   "Mondd el, hol tartasz.": "Tell us where you are.",
-  "Válaszolj néhány rövid kérdésre, hogy már az első beszélgetésre felkészülten keressünk.": "Answer a few short questions, so we come to our first conversation fully prepared.",
   "Köszönjük, megkaptuk.": "Thank you, we've received it.",
   "Hamarosan keresünk a megadott elérhetőségeiden.": "We'll be in touch shortly using the details you provided.",
   "Miben segíthetünk?": "How can we help?",
