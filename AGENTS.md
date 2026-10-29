@@ -17,3 +17,4 @@
 - Scope homepage proportion rules under `.home-page` and service proportion rules under `.services-page` so other route layouts remain independent.
 - Keep localisation in a shared language context and bundled dictionaries, selected by the `lang` query parameter and preserved in internal links; this keeps every language compatible with the same static SPA routes without duplicating page layouts.
 - Convert service prices centrally during localisation using the public ECB-based Frankfurter rate and retaining a dated verified fallback; this keeps all public prices consistent without a server or changing their HUF source amounts.
+- Store contact-form enquiries only through the lead-capture backend function (service role, no browser table access) because the static build must stay keyless and visitors must never read enquiries.
