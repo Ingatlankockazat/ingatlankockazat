@@ -50,11 +50,10 @@ export default function LandingPage() {
     [FileText, t("Világos összefoglaló", "Clear summary"), t("Megkapod, mit találtunk, mekkora a kockázat, mennyibe kerülhet a javítás, és milyen érvekkel tárgyalhatsz.", "You get what we found, how serious it is, what repairs may cost and the points you can negotiate with.")],
   ] as const;
   const gets = [
-    t("Független vélemény: nem az eladó és nem az ingatlanos oldalán állunk", "An independent view: we work for neither the seller nor the agent"),
-    t("Építőipari és tervezői tapasztalat a helyszínen", "Construction and design experience on site"),
-    t("Reális költségsávok a szükséges munkákra", "Realistic cost ranges for the work needed"),
-    t("Tárgyalási érvek az ár csökkentéséhez", "Arguments to negotiate the price down"),
-    t("Döntési támogatás: érdemes-e továbblépni", "Help deciding whether to go ahead at all"),
+    t("Személyes megtekintés szakértővel a helyszínen: veled tartunk, és a laikus szemnek láthatatlan jeleket figyeljük", "A personal viewing with an expert on site: we join you and spot the signs an untrained eye would miss"),
+    t("Kellemetlen szakmai kérdések feltétele: nem neked kell faggatnod az eladót vagy az ingatlanost", "The awkward technical questions asked for you: you don't have to grill the seller or the agent"),
+    t("Azonnali, őszinte szakmai vélemény és reális kockázatbecslés még a helyszínen", "An immediate, honest expert opinion and a realistic risk assessment, right there on the spot"),
+    t("Döntési támogatás: megmondjuk, érdemes-e továbblépni, vagy inkább engedd el", "Help deciding: we'll tell you whether it's worth going ahead, or better to walk away"),
   ];
   const prices = [
     [t("Első megtekintés", "First viewing"), "50 000 Ft‑tól"],
@@ -63,7 +62,7 @@ export default function LandingPage() {
   ];
   const faq = [
     [t("Kötelez valamire a jelentkezés?", "Does getting in touch commit me to anything?"), t("Nem. Az első konzultáció ingyenes, és utána te döntöd el, kérsz-e további segítséget.", "No. The first consultation is free, and afterwards it's entirely up to you whether you'd like further help.")],
-    [t("Mennyibe kerül?", "How much does it cost?"), `${t("Lakás vagy ház esetén is már", "For a flat or a house alike, prices start")} ${tr("50 000 Ft‑tól")}${t(" indulunk. A konzultáción pontos, személyre szabott ajánlatot adunk.", ". We'll give you an exact, personalised quote during the consultation.")}`],
+    [t("Mennyibe kerül?", "How much does it cost?"), `${t("Első megtekintés: lakás", "First viewing: apartments")} ${tr("50 000 Ft‑tól")}${t(", ház", ", houses")} ${tr("70 000 Ft‑tól")}${t(" – ez egy átlagos vételár kevesebb mint 0,1%-a, miközben milliókat spórolhat meg. Helyszíni felmérés: lakás", " – less than 0.1% of a typical purchase price, while potentially saving you thousands. On-site assessment: apartments")} ${tr("150 000 Ft‑tól")}${t(", ház", ", houses")} ${tr("200 000 Ft‑tól")}${t(". Szakmai értékelés és tervezés: lakás", ". Expert review and planning: apartments")} ${tr("350 000 Ft‑tól")}${t(", ház", ", houses")} ${tr("550 000 Ft‑tól")}.`],
     [t("Milyen gyorsan tudtok jönni?", "How quickly can you come out?"), t("Igyekszünk a döntési határidődhöz igazodni. A konzultáción egyeztetjük az időpontot.", "We do our best to fit around your deadline and agree a date during the consultation.")],
     [t("Mit készítsek elő?", "What should I prepare?"), t("Ha van, a hirdetést, a tervrajzokat és a műszaki dokumentumokat. Ha nincs, abban is segítünk, mit kérj el.", "If you have them, the listing, floor plans and any technical documents. If not, we'll tell you what to ask for.")],
     [t("Hol dolgoztok?", "Where do you work?"), t("Budapesten és Pest megyében.", "In Budapest and Pest County.")],
@@ -112,7 +111,7 @@ export default function LandingPage() {
           </div>
           <div className="lp-prices">
             {prices.map(([n, p]) => <div key={n}><span>{n}</span><strong>{tr(p)}</strong></div>)}
-            <p>{t("Lakásra és házra vonatkozó kezdő árak. Ház esetén a méret és az állapot alapján pontos ajánlatot az ingyenes konzultáción adunk.", "Starting prices for flats and houses. For houses, we'll quote exactly based on size and condition during the free consultation. We'll give you an exact quote during the free consultation.")}</p>
+            <p>{t("Az első megtekintés egy átlagos vételár kevesebb mint 0,1%-a – miközben millióktól és rengeteg későbbi fejfájástól óvhat meg.", "A first viewing costs less than 0.1% of a typical purchase price – while protecting you from thousands in surprise costs and a lot of headaches.")}</p>
           </div>
         </div>
       </section>
