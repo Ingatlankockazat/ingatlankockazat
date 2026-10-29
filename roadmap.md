@@ -39,3 +39,5 @@
 - [x] Show the About page copy before the portrait on phones; verify both languages at phone and desktop widths.
 - [x] Add the owner name and role caption under the About page portrait in both languages (English name order first name then surname); verify phone and desktop.
 
+- [ ] Contact page lead form (4 steps, partial capture after step 3) on desktop and phone, HU/EN; privacy notice section.
+- [ ] Owner email to info@ingatlankockazat.hu for started and submitted enquiries — blocked on email domain verification.
