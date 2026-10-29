@@ -1,0 +1,19 @@
+.inspection-guide{padding-top:80px}
+.inspection-guide .guide-header{padding:64px 0 40px;max-width:920px}
+.inspection-guide h1{font-size:3rem;letter-spacing:0;max-width:900px}
+.inspection-guide h2{font-size:2rem;letter-spacing:0;margin-bottom:1rem}
+.inspection-guide h3{font-size:1.3rem;letter-spacing:0}
+.inspection-guide p,.inspection-guide li{color:var(--muted)}
+.inspection-guide .guide-layout{display:grid;grid-template-columns:minmax(0,760px) minmax(240px,1fr);gap:64px;padding-bottom:64px;align-items:start}
+.inspection-guide .guide-content section{padding:32px 0;border-top:1px solid var(--border);scroll-margin-top:100px}
+.inspection-guide .guide-content ul,.inspection-guide .guide-content ol{padding-left:1.4rem}
+.inspection-guide .guide-content li{margin-bottom:.75rem}
+.inspection-guide .guide-image{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;margin-bottom:24px}
+.inspection-guide .guide-aside{position:sticky;top:112px}
+.inspection-guide .guide-aside a:not(.button-secondary){display:block;padding:.6rem 0;border-bottom:1px solid var(--border)}
+.inspection-guide .guide-aside a:hover{color:var(--accent)}
+.inspection-guide .guide-aside .button-secondary{margin-top:24px;white-space:normal;height:auto;letter-spacing:0;text-transform:none}
+.inspection-guide .guide-content a{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.inspection-guide .guide-header .button-primary{height:auto;white-space:normal;letter-spacing:0;text-transform:none}
+@media(max-width:900px){.inspection-guide .guide-layout{grid-template-columns:1fr;gap:24px}.inspection-guide .guide-aside{position:static;order:-1}.inspection-guide .guide-aside .guide-image{display:none}}
+@media(max-width:640px){.inspection-guide h1{font-size:2rem;overflow-wrap:anywhere}.inspection-guide h2{font-size:1.6rem}.inspection-guide .guide-header{padding-top:40px}.inspection-guide .guide-layout{padding-bottom:40px}}
