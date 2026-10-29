@@ -9,10 +9,18 @@
 ## A javasolt megoldás (nincs zárolt mező, mégis jogilag tisztább)
 Ugyanazt a többlépéses mintát követjük, és a félbehagyott adatot csak egy tudatos kattintás után mentjük:
 
-1. **1. lépés – Téma:** vásárlás, eladás, bérlés, bérbeadás vagy egyéb. Nincs személyes adat, nincs mit menteni.
-2. **2. lépés – Név és telefon / e-mail.** A „Tovább” gomb fölött egy rövid sor áll: „A Tovább gombbal hozzájárulsz, hogy a megadott elérhetőségeiden felkeressünk, akkor is, ha az űrlapot nem küldöd el. Részletek: Adatkezelés.” **A mentés a „Tovább” megnyomásakor történik**, gépelés közben nem.
-3. **3. lépés – Üzenet és küldés.** Itt egy külön, nem kötelező pipa kér hozzájárulást a későbbi marketing-megkereséshez. Küldéskor ugyanaz az érdeklődő „elküldött” állapotra vált.
-4. Az Adatkezelés oldal kiegészül egy új bekezdéssel erről, magyarul és angolul. Javasolt megőrzési idő: 12 hónap. Az adatok törlése bármikor kérhető.
+1. **1. lépés – Miben segíthetünk?** Vásárlás, eladás, bérlés, bérbeadás, felújítás vagy egyéb. Kattintható választás, személyes adat nélkül.
+2. **2. lépés – Célzott kérdések a téma szerint.** Kattintható válaszok, mindegyik mellett egy „Egyéb” lehetőség:
+   - Vásárlás: hol tartasz (még keresek / kinéztem egyet / ajánlatot tettem / szerződés előtt), mi a célod (saját otthon / befektetés / kiadás), mekkora a kereted (sávok), mikorra tervezed.
+   - Eladás: hol tartasz, milyen áron hirdetnéd (sávok), mi a célod (gyors eladás / legjobb ár / felkészítés).
+   - Bérlés és bérbeadás: hol tartasz, mekkora a havi díj (sávok), mi okoz gondot.
+   - Felújítás: milyen fázisban vagy, mekkora a keret, mi a cél.
+   - Minden témánál: ingatlan típusa (lakás / ház / egyéb) és helye (Budapest / Pest megye / máshol).
+3. **3. lépés – Név és telefon / e-mail.** A „Tovább” gomb fölött egy rövid sor áll: „A Tovább gombbal hozzájárulsz, hogy a megadott elérhetőségeiden felkeressünk, akkor is, ha az űrlapot nem küldöd el. Részletek: Adatkezelés.” **A mentés a „Tovább” megnyomásakor történik**, gépelés közben nem. A mentés az előző két lépés válaszait is tartalmazza.
+4. **4. lépés – Szabadszavas rész és küldés.** „Írd le pár mondatban, mi foglalkoztat” mező. Alatta egy külön, nem kötelező pipa kér hozzájárulást a későbbi marketing-megkereséshez. Küldéskor ugyanaz az érdeklődő „elküldött” állapotra vált.
+5. Az Adatkezelés oldal kiegészül egy új bekezdéssel erről, magyarul és angolul. Javasolt megőrzési idő: 12 hónap. Az adatok törlése bármikor kérhető.
+
+A keret- és ársávokat én javaslom. A végleges sávokat megadhatod, vagy jóváhagyás után átírom őket.
 
 Ez gyakorlati javaslat, nem jogi tanácsadás. A végleges szöveget érdemes adatvédelmi szakemberrel átnézetni.
 
