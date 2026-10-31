@@ -10,22 +10,16 @@ const WHATSAPP = "https://wa.me/36309039630";
 export default function LandingPageEn() {
   const toForm = () => document.getElementById("erdeklodom")?.scrollIntoView({ behavior: "smooth" });
 
-  const onCall = [
-    "Your goals, budget and the areas of Budapest worth considering",
-    "How buying property in Hungary works, and the requirements for foreign buyers",
-    "A first reality check on any listing you're already looking at",
-    "How we can represent you on the ground if you can't be here in person",
-  ];
   const pillars = [
-    [MapPin, "Your expert on the ground", "When you can't be in Budapest, we attend viewings for you and report back honestly, with photos and video."],
-    [Search, "Shortlisting that saves flights", "We filter out problem properties early, so you only travel for the ones genuinely worth seeing."],
-    [Handshake, "Only on your side", "We don't work for sellers or agents and take no commission from them. Our only interest is yours."],
+    [MapPin, "Your expert on the ground", "Whether you're abroad or already living in Budapest, we attend viewings with you or for you and report back honestly."],
+    [Search, "Rules and language, handled", "We explain how buying works in Hungary, read the Hungarian paperwork with you and filter out problem properties early."],
+    [Handshake, "Someone you can rely on", "We don't work for sellers or agents and take no commission from them. Our only interest is yours."],
   ] as const;
   const fears = [
     ["Agents work for the seller", "In Hungary the agent's fee usually depends on the sale going through, not on you getting a good deal."],
     ["Photos hide the building", "Damp, outdated wiring, roof problems and building-wide repair costs rarely appear in a listing."],
     ["Paperwork you can't read", "Floor plans, condominium rules and permits are in Hungarian, and mismatches can cost you later."],
-    ["Deciding from abroad", "Committing to a property you've only seen on a screen is the biggest risk of all."],
+    ["Deciding from abroad, or alone here", "Whether you've only seen the property on a screen or you're already in Budapest without the language or anyone to rely on, deciding alone is the biggest risk of all."],
   ];
   const steps = [
     ["Leave your details", "Fill in the short form below or message us on WhatsApp. It takes under a minute."],
@@ -37,7 +31,7 @@ export default function LandingPageEn() {
     ["Do I need to have chosen a property already?", "No. Many clients start before they have a shortlist. We can talk about areas, budget and how the process works."],
     ["I live abroad. Can you still help?", "Yes, that's exactly what we do. We represent your interests in Budapest and keep you informed at every step."],
     ["Is everything in English?", "Yes. The call and all our communication are in English, and we explain any Hungarian documents in plain terms."],
-    ["Phone or WhatsApp?", "Whichever suits you. Leave your number in the form or message us directly on WhatsApp."],
+    ["Phone or WhatsApp?", "Whichever suits you. Leave your phone number or email in the form, or message us directly on WhatsApp."],
     ["Where do you work?", "In Budapest and Pest County."],
   ];
 
@@ -84,7 +78,7 @@ export default function LandingPageEn() {
             <h2>Attila Pádár</h2>
             <p className="lp-role">Owner</p>
             <p className="lead">Over the past 30 years I've been a seller, a buyer, an investor and a builder. I've faced problems that challenged even me as a professional, and solving them taught me how property deals really work here.</p>
-            <p>I'd like to put that experience to work for you, whether you lack the time, the local knowledge or someone you can trust. From your first questions to the final details, I look after your interests only.</p>
+            <p className="lead" style={{ fontSize: "clamp(1.2rem, 2vw, 1.5rem)", color: "var(--foreground)" }}>I'd like to put that experience to work for you, whether you lack the time, the local knowledge or someone you can trust. From your first questions to the final details, I look after your interests only.</p>
           </div>
         </div>
       </section>
@@ -94,7 +88,7 @@ export default function LandingPageEn() {
           <div>
             <p className="kicker">Your free 15-minute call</p>
             <h2>Fifteen minutes. Clear answers.</h2>
-            <ul className="lp-checks">{onCall.map(g => <li key={g}><Check size={18} />{g}</li>)}</ul>
+            <p className="lead">A relaxed introductory call: we get to know each other, hear where you are in the process, and agree how we can best work together.</p>
           </div>
           <div className="lp-prices">
             <div><span>Length</span><strong>15 minutes</strong></div>
