@@ -2,12 +2,12 @@
 export const GA_MEASUREMENT_ID = "G-01M3MMHG3F";
 
 type Gtag = (...args: unknown[]) => void;
-declare global { interface Window { dataLayer?: unknown[]; gtag?: Gtag } }
+declare global { interface Window { dataLayer?: unknown[]; gtag?: Gtag; __ikBot?: boolean } }
 
 let started = false;
 
 export function initAnalytics() {
-  if (started || !GA_MEASUREMENT_ID || typeof window === "undefined") return;
+  if (started || !GA_MEASUREMENT_ID || typeof window === "undefined" || window.__ikBot) return;
   started = true;
   // The Google tag itself is loaded in index.html <head>; only add it if missing.
   if (!window.gtag) {

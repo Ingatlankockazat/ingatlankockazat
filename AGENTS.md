@@ -23,3 +23,4 @@
 - Keep inspection guides as public bilingual editorial routes with scoped styles, self-referencing head tags, a services-page link and a sitemap entry so search visitors can reach the relevant enquiry flow without changing campaign navigation.
 - Load Google Analytics with Consent Mode defaulting to denied and grant analytics only from the shared cookie banner; load other analytics tags (Contentsquare) only via the consent-gated loader, because the privacy notice promises analytics cookies only after consent.
 - Google Tag Manager loads from index.html after the consent default and shares the dataLayer with the direct GA tag; never add a GA4 tag with the same ID inside GTM, or page views double.
+- Measurement tags (GA, GTM, Contentsquare) are skipped when the inline bot check in index.html sets window.__ikBot, so automated traffic never reaches the statistics.
