@@ -1,4 +1,4 @@
-import { Check, Phone, ShieldCheck, MessageCircle, MapPin, Search, Handshake } from "lucide-react";
+import { Phone, ShieldCheck, MessageCircle, MapPin, Search, Handshake } from "lucide-react";
 import LeadForm from "@/components/site/LeadForm";
 import { images } from "@/assets/redesign";
 import portrait from "@/assets/redesign/about-portrait.jpg";
@@ -29,7 +29,7 @@ export default function LandingPageEn() {
   const faq = [
     ["Is the call really free?", "Yes. The 15-minute call is free and comes with no obligation to book anything afterwards."],
     ["Do I need to have chosen a property already?", "No. Many clients start before they have a shortlist. We can talk about areas, budget and how the process works."],
-    ["I live abroad. Can you still help?", "Yes, that's exactly what we do. We represent your interests in Budapest and keep you informed at every step."],
+    ["I live abroad, or I'm already in Budapest. Can you help?", "Yes, either way. We represent your interests in Budapest, explain the local rules and keep you informed at every step."],
     ["Is everything in English?", "Yes. The call and all our communication are in English, and we explain any Hungarian documents in plain terms."],
     ["Phone or WhatsApp?", "Whichever suits you. Leave your phone number or email in the form, or message us directly on WhatsApp."],
     ["Where do you work?", "In Budapest and Pest County."],
