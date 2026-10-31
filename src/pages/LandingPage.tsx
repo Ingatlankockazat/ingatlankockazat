@@ -52,16 +52,16 @@ export default function LandingPage() {
     ["Te döntesz a folytatásról", "Ha szeretnéd a segítségünket, elmondjuk, hogyan tudunk együtt dolgozni. Ha nem, független tanácsokkal távozol."],
   ];
   const gets = [
-    "Elmondhatod, hol tartasz, és milyen segítséget keresel.",
-    "Megismerheted, ki állna melletted az ingatlanvásárlás során.",
-    "Megbeszéljük, hogyan tudunk együtt dolgozni, ha folytatnád.",
+    "Kiszemelt ingatlan gyors elemzése: átbeszéljük az ingatlan típusát, korát, a hirdetést és a leggyakoribb rejtett kockázatokat.",
+    "Célzott szolgáltatási javaslat: megmutatjuk, hogy helyszíni szemlére, részletes műszaki felmérésre vagy komplex projektfelügyeletre van-e szükséged, felesleges körök nélkül.",
+    "Együttműködés keretei: tisztázzuk, hogyan tudunk melletted állni, hogy ne egyedül kelljen meghoznod a döntést.",
   ];
   const faq = [
     ["Tényleg ingyenes a 15 perces beszélgetés?", "Igen. Ez egy ingyenes, kötelezettségmentes ismerkedő beszélgetés. Nem kell szolgáltatást választanod vagy fizetned a jelentkezéshez. A folytatásról te döntesz."],
     ["Mit jelent az ismerkedő beszélgetés?", "Megismerjük a helyzetedet, az elképzeléseidet és azt, milyen segítséget keresel. Elmondjuk, hogyan tudnánk együtt dolgozni. Ez nem helyszíni felmérés vagy részletes műszaki értékelés; ezek külön szolgáltatások."],
     ["Hogyan és mikor beszélünk?", "Telefonon, WhatsAppon vagy online, előre egyeztetett időpontban. Az űrlapon hagyj telefonszámot vagy e-mail-címet, hogy meg tudjuk szervezni a beszélgetést."],
     ["Akkor is jelentkezhetek, ha még nincs konkrét ingatlan?", "Igen. Akkor is beszélhetünk az együttműködésről, ha még keresel, és akkor is, ha már van kiszemelt lakásod vagy házad."],
-    ["Mennyibe kerül a segítség, ha folytatni szeretném?", "Az első beszélgetés ingyenes. A további szolgáltatások kezdő árai: első megtekintés – lakás 50 000 Ft-tól, ház 70 000 Ft-tól; helyszíni felmérés – lakás 150 000 Ft-tól, ház 200 000 Ft-tól; szakmai értékelés és tervezés – lakás 350 000 Ft-tól, ház 550 000 Ft-tól. De a helyszíni vizsgálat csak a kezdet: teljes körű, end-to-end szolgáltatást is vállalunk – teljes projektmenedzsment, konfliktuskezelés és vitarendezés, teljes körű pénzügyi tanácsadás (hitel és biztosítás), az ingatlan jogi hátterének áttekintése, az adásvételi folyamat nyomon követése és szakmai felügyelete, karbantartási és üzemeltetési tanácsadás – sőt, ha befektetésként veszed, később az ingatlan értékesítésében is segítünk. A fizetős segítség külön egyeztetés alapján indul, a 15 perces ingyenes beszélgetés nem kötelez semmire."],
+    ["Mennyibe kerül a segítség, ha folytatni szeretném?", "Az első beszélgetés ingyenes. A további szolgáltatások kezdő árai: első megtekintés: lakás 50 000 Ft-tól, ház 70 000 Ft-tól; helyszíni felmérés: lakás 150 000 Ft-tól, ház 200 000 Ft-tól; szakmai értékelés és tervezés: lakás 350 000 Ft-tól, ház 550 000 Ft-tól. De a helyszíni vizsgálat csak a kezdet: teljes körű, end-to-end szolgáltatást is vállalunk: teljes projektmenedzsment, konfliktuskezelés és vitarendezés, teljes körű pénzügyi tanácsadás (hitel és biztosítás), az ingatlan jogi hátterének áttekintése, az adásvételi folyamat nyomon követése és szakmai felügyelete, karbantartási és üzemeltetési tanácsadás, sőt, ha befektetésként veszed, később az ingatlan értékesítésében is segítünk. A fizetős segítség külön egyeztetés alapján indul, a 15 perces ingyenes beszélgetés nem kötelez semmire."],
     ["Hol tudtok személyesen segíteni?", "Budapesten és Pest megyében. A helyszíni együttműködés lehetőségeit a beszélgetés során egyeztetjük."],
   ];
 
@@ -96,14 +96,14 @@ export default function LandingPage() {
         <div className="site-container lp-split">
           <div>
             <p className="kicker">Az első lépés: egy beszélgetés</p>
-            <h2>Előbb ismerjük meg egymást. Aztán döntesz.</h2>
-            <p className="lp-section-intro">Nem kell most tudnod, milyen szolgáltatásra van szükséged. Az első 15 perc célja, hogy megismerjük a helyzetedet, és megbeszéljük az együttműködés lehetőségeit.</p>
+            <h2>Az ingatlanpiac nem a te védelmedre épült.</h2>
+            <p className="lp-section-intro">Az eladó eladni akar, a közvetítő a jutalékért hajt, a rendszer nem a vevő védelmére lett kitalálva. Az első 15 perces konzultáción átbeszéljük a szükségleteidet, a problémáidat és azt, hogyan tudok a segítségedre lenni, hogyan működhet az együttműködésünk.</p>
             <ul className="lp-checks">{gets.map(g => <li key={g}><Check size={18} />{g}</li>)}</ul>
           </div>
           <div className="lp-call-offer">
-            <p className="kicker">A te ingyenes 15 perced</p>
+            <p className="kicker">Ingyenes konzultáció</p>
             <strong className="lp-call-price">0 Ft</strong>
-            <p>Ismerkedő beszélgetés Pádár Attilával. Nem felmérés, nem értékesítési kötelezettség – lehetőség arra, hogy kiderüljön, tudunk-e együtt dolgozni.</p>
+            <p>Ingyenes konzultáció Pádár Attilával telefonon, WhatsAppon vagy online. Nem felmérés és nem kötelezettség, hanem lehetőség arra, hogy átlássuk a helyzetedet, mindenféle nyomás nélkül.</p>
             <Button className="button-primary" onClick={toForm}>Ingyenes 15 perces konzultáció foglalása <span>→</span></Button>
           </div>
         </div>
