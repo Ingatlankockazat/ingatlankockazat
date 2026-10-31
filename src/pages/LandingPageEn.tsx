@@ -122,7 +122,7 @@ export default function LandingPageEn() {
         </div>
       </section>
 
-      <div className="lp-sticky"><button className="button-primary" onClick={toForm}>Book free call →</button><a href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><MessageCircle size={20} /></a><a href={`tel:${PHONE}`} aria-label="Call"><Phone size={20} /></a></div>
+      <div className="lp-sticky"><button className="button-primary" onClick={toForm}>Book free call →</button><a href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><MessageCircle size={20} /></a></div>
     </div>
   );
 }
