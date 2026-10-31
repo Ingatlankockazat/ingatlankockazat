@@ -1,5 +1,9 @@
 import { describe, expect, test } from "bun:test";
-import { readConsent, saveConsent } from "./consent.ts";
+import { readConsent, saveConsent, analyticsCookieNames } from "./consent.ts";
+
+test("withdrawing consent targets GA and Contentsquare cookies only", () => {
+  expect(analyticsCookieNames("_ga=1; _ga_ABC=2; _cs_id=3; ik_lang=en")).toEqual(["_ga", "_ga_ABC", "_cs_id"]);
+});
 
 const mem = () => { const m = new Map(); return { getItem: k => m.get(k) ?? null, setItem: (k, v) => m.set(k, v) }; };
 
