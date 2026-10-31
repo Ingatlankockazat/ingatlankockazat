@@ -44,7 +44,6 @@ export default function LandingPageEn() {
           <div className="lp-cta-row">
             <button className="button-primary" onClick={toForm}>Book a free 15-minute call <span>→</span></button>
             <a className="lp-phone" href={WHATSAPP} target="_blank" rel="noopener noreferrer"><MessageCircle size={18} /> WhatsApp</a>
-            <a className="lp-phone" href={`tel:${PHONE}`}><Phone size={18} /> {PHONE_LABEL}</a>
           </div>
           <ul className="lp-trust">
             {["100% buyer-side", "30 years in property", "English-speaking", "Free, no obligation"].map(x => <li key={x}><ShieldCheck size={16} />{x}</li>)}
