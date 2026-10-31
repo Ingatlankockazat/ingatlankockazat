@@ -1,10 +1,8 @@
-import { Phone, ShieldCheck, MessageCircle, MapPin, Search, Handshake } from "lucide-react";
+import { ShieldCheck, MessageCircle, MapPin, Search, Handshake } from "lucide-react";
 import LeadForm from "@/components/site/LeadForm";
 import { images } from "@/assets/redesign";
 import portrait from "@/assets/redesign/about-portrait.jpg";
 
-const PHONE = "+36309039630";
-const PHONE_LABEL = "+36 30 903 9630";
 const WHATSAPP = "https://wa.me/36309039630";
 
 export default function LandingPageEn() {
