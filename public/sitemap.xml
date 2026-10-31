@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ingatlankockazat.hu/</loc></url>
-  <url><loc>https://ingatlankockazat.hu/szolgaltatasok</loc></url>
-  <url><loc>https://ingatlankockazat.hu/rolunk</loc></url>
-  <url><loc>https://ingatlankockazat.hu/kapcsolat</loc></url>
-  <url><loc>https://ingatlankockazat.hu/ingatlan-atvilagitas</loc></url>
-  <url><loc>https://ingatlankockazat.hu/ingatlan-muszaki-allapotfelmeres</loc></url>
-  <url><loc>https://ingatlankockazat.hu/adatkezeles</loc></url>
-  <url><loc>https://ingatlankockazat.hu/impresszum</loc></url>
+  <url>
+    <loc>https://ingatlankockazat.hu/</loc>
+  </url>
+  <url>
+    <loc>https://ingatlankockazat.hu/szolgaltatasok</loc>
+  </url>
+  <url>
+    <loc>https://ingatlankockazat.hu/rolunk</loc>
+  </url>
+  <url>
+    <loc>https://ingatlankockazat.hu/kapcsolat</loc>
+  </url>
+  <url>
+    <loc>https://ingatlankockazat.hu/ingatlan-atvilagitas</loc>
+  </url>
+  <url>
+    <loc>https://ingatlankockazat.hu/ingatlan-muszaki-allapotfelmeres</loc>
+  </url>
+  <url>
+    <loc>https://ingatlankockazat.hu/adatkezeles</loc>
+  </url>
+  <url>
+    <loc>https://ingatlankockazat.hu/impresszum</loc>
+  </url>
 </urlset>
