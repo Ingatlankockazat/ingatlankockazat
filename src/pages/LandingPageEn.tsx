@@ -89,7 +89,7 @@ export default function LandingPageEn() {
           </div>
           <div className="lp-prices">
             <div><span>Length</span><strong>15 minutes</strong></div>
-            <div><span>By</span><strong>Phone or WhatsApp</strong></div>
+            <div><span>By</span><strong>Online, phone or WhatsApp</strong></div>
             <div><span>Cost</span><strong>Free</strong></div>
             <p>No sales pitch and no obligation – just honest, independent advice before you commit to anything.</p>
             <button className="button-primary" onClick={toForm}>Book my call <span>→</span></button>
