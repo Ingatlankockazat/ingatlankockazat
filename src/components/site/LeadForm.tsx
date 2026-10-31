@@ -2,6 +2,7 @@ import { useRef, useState, type FormEvent } from "react";
 import { AlertDialog, AlertDialogAction, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { useLanguage, LanguageLink as Link } from "@/lib/i18n/Language";
+import { trackEvent } from "@/lib/analytics";
 
 const CONSENT_VERSION = "2026-10-29-v1";
 const endpoint = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/lead-capture`;
@@ -93,7 +94,7 @@ export default function LeadForm() {
   async function submitFinal(e: FormEvent) {
     e.preventDefault();
     setError(""); setBusy(true);
-    try { await send("submitted"); setDone(true); }
+    try { await send("submitted"); setDone(true); trackEvent("generate_lead", { page_path: window.location.pathname, language }); }
     catch { setError(tr("Valami hiba történt. Próbáld újra, vagy hívj minket.")); }
     finally { setBusy(false); }
   }

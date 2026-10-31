@@ -5,6 +5,7 @@ import logoHeader from "@/assets/redesign/logo-header.png";
 import logoMark from "@/assets/redesign/logo-mark.png";
 import { useLanguage } from "@/lib/i18n/Language";
 import { localisedPath } from "@/lib/i18n/routing";
+import { initAnalytics, trackPageView } from "@/lib/analytics";
 
 const links = [
   { to: "/", label: "Kezdőlap" },
@@ -21,6 +22,7 @@ export function SiteLayout() {
   const [scrolled, setScrolled] = useState(false);
   const minimal = location.pathname === "/ingatlan-atvilagitas";
   useEffect(() => { window.scrollTo(0, 0); setOpen(false); }, [location.pathname]);
+  useEffect(() => { initAnalytics(); const t = setTimeout(() => trackPageView(location.pathname, location.search), 50); return () => clearTimeout(t); }, [location.pathname, location.search]);
   useEffect(() => {
     const q = new URLSearchParams(location.search); const keys = ["utm_source","utm_medium","utm_campaign","utm_term","gclid","fbclid"];
     const found = Object.fromEntries(keys.filter(k => q.get(k)).map(k => [k, q.get(k)!.slice(0, 200)]));
