@@ -1,5 +1,5 @@
 // Google Analytics 4. The measurement ID is public (visible in every page's source).
-export const GA_MEASUREMENT_ID = "";
+export const GA_MEASUREMENT_ID = "G-01M3MMHG3F";
 
 type Gtag = (...args: unknown[]) => void;
 declare global { interface Window { dataLayer?: unknown[]; gtag?: Gtag } }
@@ -9,17 +9,20 @@ let started = false;
 export function initAnalytics() {
   if (started || !GA_MEASUREMENT_ID || typeof window === "undefined") return;
   started = true;
-  const s = document.createElement("script");
-  s.async = true;
-  s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-  document.head.prepend(s);
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function () {
-    // eslint-disable-next-line prefer-rest-params -- gtag.js needs the Arguments object
-    window.dataLayer!.push(arguments);
-  };
-  window.gtag("js", new Date());
-  window.gtag("config", GA_MEASUREMENT_ID, { send_page_view: false });
+  // The Google tag itself is loaded in index.html <head>; only add it if missing.
+  if (!window.gtag) {
+    const s = document.createElement("script");
+    s.async = true;
+    s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+    document.head.prepend(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () {
+      // eslint-disable-next-line prefer-rest-params -- gtag.js needs the Arguments object
+      window.dataLayer!.push(arguments);
+    };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_MEASUREMENT_ID, { send_page_view: false });
+  }
 
   // Phone and WhatsApp clicks anywhere on the site.
   document.addEventListener("click", (e) => {
