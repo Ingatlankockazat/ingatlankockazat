@@ -52,9 +52,9 @@ export default function LandingPage() {
     ["Te döntesz a folytatásról", "Ha szeretnéd a segítségünket, elmondjuk, hogyan tudunk együtt dolgozni. Ha nem, független tanácsokkal távozol."],
   ];
   const gets = [
-    "Kiszemelt ingatlan gyors elemzése: átbeszéljük az ingatlanra vonatkozó részleteket és egyéb részleteket.",
+    "Kiszemelt ingatlan gyors elemzése: átbeszéljük az ingatlan részleteit és a felmerülő kérdéseidet.",
     "Együttműködés keretei: tisztázzuk, hogyan tudunk melletted állni az ingatlanvásárlási utadon.",
-    "Célzott szolgáltatási javaslat: tanácsot adunk abban, hogy szerintünk milyen szakmai segítségre lenne szükséged, legyen az helyszíni szemle, részletes műszaki felmérés vagy komplex projektfelügyelet, felesleges körök és mellébeszélés nélkül.",
+    "Célzott szolgáltatási javaslat: megmondjuk, szerintünk milyen szakmai segítségre van szükséged, legyen az helyszíni szemle, részletes műszaki felmérés vagy komplex projektfelügyelet, felesleges körök és mellébeszélés nélkül.",
   ];
   const faq = [
     ["Tényleg ingyenes a 15 perces beszélgetés?", "Igen. Ez egy ingyenes, kötelezettségmentes ismerkedő beszélgetés. Nem kell szolgáltatást választanod vagy fizetned a jelentkezéshez. A folytatásról te döntesz."],
