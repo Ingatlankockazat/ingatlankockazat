@@ -8,7 +8,7 @@ let csLoaded = false;
 export function applyConsent(choice: ConsentChoice | null) {
   if (typeof window === "undefined") return;
   if (choice === "granted") {
-    if (!csLoaded) { csLoaded = true; injectContentsquareScript({ clientId: CONTENTSQUARE_TAG_ID }); }
+    if (!csLoaded && !window.__ikBot) { csLoaded = true; injectContentsquareScript({ clientId: CONTENTSQUARE_TAG_ID }); }
     return;
   }
   if (choice === "denied") {

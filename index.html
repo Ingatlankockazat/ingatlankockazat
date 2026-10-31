@@ -1,17 +1,46 @@
 <!doctype html>
 <html lang="hu">
   <head>
+    <!-- Bot filter: automated browsers and crawlers never load measurement tags -->
+    <script>
+      window.__ikBot = !!(navigator.webdriver || /bot|crawl|spider|slurp|headless|phantom|lighthouse|pagespeed|gtmetrix|pingdom|uptime|python|curl|wget|scrapy|puppeteer|playwright|selenium/i.test(navigator.userAgent) || !navigator.languages || navigator.languages.length === 0);
+    </script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-01M3MMHG3F"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      if (!window.__ikBot) {
+        var g = document.createElement('script'); g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=G-01M3MMHG3F'; document.head.appendChild(g);
+      }
       gtag('consent', 'default', { analytics_storage: localStorage.getItem('ik_cookie_consent') === 'granted' ? 'granted' : 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
       gtag('js', new Date());
       gtag('config', 'G-01M3MMHG3F', { send_page_view: false });
     </script>
-    <!-- Google Tag Manager (after consent default) -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KS64N2JL');</script>
+    <!-- Google Tag Manager (after consent default, skipped for bots) -->
+    <script>if(!window.__ikBot)(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KS64N2JL');</script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["ProfessionalService", "LocalBusiness"],
+      "@id": "https://ingatlankockazat.hu/#business",
+      "name": "Ingatlankockázat",
+      "alternateName": "Property Support",
+      "url": "https://ingatlankockazat.hu/",
+      "logo": "https://ingatlankockazat.hu/favicon.png",
+      "description": "Független műszaki és szakmai ingatlantanácsadás Budapesten és Pest megyében: vásárlás előtti műszaki állapotfelmérés, rejtett hibák feltárása, felújítás tervezése, projektmenedzsment, bérbeadói támogatás és angol nyelvű segítség külföldi vásárlóknak.",
+      "areaServed": [{ "@type": "City", "name": "Budapest" }, { "@type": "AdministrativeArea", "name": "Pest megye" }],
+      "address": { "@type": "PostalAddress", "addressLocality": "Budapest", "addressCountry": "HU" },
+      "email": "info@ingatlankockazat.hu",
+      "availableLanguage": ["hu", "en"],
+      "founder": { "@type": "Person", "name": "Pádár Attila", "jobTitle": "Tulajdonos, független műszaki szakértő" },
+      "knowsAbout": ["ingatlanvásárlás", "vásárlás előtti műszaki állapotfelmérés", "rejtett hibák feltárása", "beázás, penész, repedés vizsgálata", "épületgépészet és villamos hálózat ellenőrzése", "felújítási költségbecslés", "felújítás tervezése és koordinációja", "projektmenedzsment", "konfliktuskezelés és vitarendezés", "ingatlan jogi hátterének áttekintése", "adásvételi folyamat felügyelete", "bérbeadói tanácsadás", "ingatlan értékesítési támogatás", "property inspection Budapest", "buying property in Hungary as a foreigner"],
+      "makesOffer": [
+        { "@type": "Offer", "name": "Ingyenes 15 perces konzultáció", "price": "0", "priceCurrency": "HUF" },
+        { "@type": "Offer", "name": "Első közös megtekintés (lakás)", "price": "50000", "priceCurrency": "HUF" },
+        { "@type": "Offer", "name": "Helyszíni műszaki felmérés (lakás)", "price": "150000", "priceCurrency": "HUF" }
+      ]
+    }
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ingatlankockázat – független műszaki és szakmai támogatás ingatlandöntések előtt</title>
