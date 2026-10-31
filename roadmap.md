@@ -45,3 +45,4 @@
 
 - [x] Contact page lead form (4 steps, partial capture after step 3) on desktop and phone, HU/EN; privacy notice section.
 - [ ] Owner email to info@ingatlankockazat.hu for started and submitted enquiries — blocked on email domain verification.
+- [x] Exclude bots from GA4/GTM/Contentsquare, add form fill-time spam guard, add llms.txt, AI-friendly robots.txt and business structured data.
