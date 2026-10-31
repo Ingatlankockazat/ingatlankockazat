@@ -24,4 +24,4 @@
   .lp-hu .lp-cta-row { gap: 1rem; }
   .lp-hu .lp-cta-row > .button-primary { width: 100%; }
   .lp-hu .lp-sticky .button-primary { font-size: .75rem; padding: .7rem .8rem; }
-}
+}.lp-hu .lp-about .button-primary { margin-top: 2rem; }
