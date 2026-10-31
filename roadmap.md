@@ -1,5 +1,7 @@
 # Redesign roadmap
 
+- [ ] Refocus the Hungarian campaign on the free 15-minute introductory call; preserve the English page, form and Telegram alerts; verify CTA navigation and layouts.
+
 - [x] Resolve the approved SEO guide finding: publishable inspection guide, services link, sitemap and verification.
 
 - [x] Clarify the requested English copy, remove the services exchange-rate note and duplicate English About label; verify English and Hungarian pages.
