@@ -11,6 +11,7 @@ import { useLanguage } from "@/lib/i18n/Language";
 const PHONE = "+36309039630";
 const PHONE_LABEL = "+36 30 903 9630";
 const URL = "https://ingatlankockazat.hu/ingatlan-atvilagitas";
+const URL_EN = "https://ingatlankockazat.hu/ingatlan-atvilagitas?lang=en";
 
 function setMeta(selector: string, attr: string, key: string, value: string) {
   let el = document.head.querySelector<HTMLElement>(selector);
@@ -28,13 +29,14 @@ export default function LandingPage() {
     const prev = document.title;
     const title = t("Ingatlanvásárlás előtt? Ingyenes 15 perces beszélgetés | Ingatlankockázat", "Buying property in Budapest? Free 15-minute call with an independent expert | Property Support");
     const desc = t("Lakást vagy házat vennél? Kezdd egy ingyenes, 15 perces ismerkedő beszélgetéssel Pádár Attilával. Megbeszéljük, hol tartasz és hogyan tudunk együtt dolgozni. Budapest és Pest megye.", "Buying property in Hungary from abroad? We guide you through the process, shortlist properties and represent you on the ground. Book a free 15-minute call.");
+    const pageUrl = en ? URL_EN : URL;
     document.title = title;
     const added = [
       setMeta('meta[name="description"]', "name", "description", desc),
       setMeta('meta[property="og:title"]', "property", "og:title", title),
       setMeta('meta[property="og:description"]', "property", "og:description", desc),
-      setMeta('meta[property="og:url"]', "property", "og:url", URL),
-      setMeta('link[rel="canonical"]', "rel", "canonical", URL),
+      setMeta('meta[property="og:url"]', "property", "og:url", pageUrl),
+      setMeta('link[rel="canonical"]', "rel", "canonical", pageUrl),
     ];
     return () => { document.title = prev; added[3].remove(); added[4].remove(); };
   }, [language]);

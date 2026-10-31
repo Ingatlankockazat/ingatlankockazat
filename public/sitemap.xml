@@ -16,7 +16,13 @@
     <loc>https://ingatlankockazat.hu/ingatlan-atvilagitas</loc>
   </url>
   <url>
+    <loc>https://ingatlankockazat.hu/ingatlan-atvilagitas?lang=en</loc>
+  </url>
+  <url>
     <loc>https://ingatlankockazat.hu/ingatlan-muszaki-allapotfelmeres</loc>
+  </url>
+  <url>
+    <loc>https://ingatlankockazat.hu/ingatlan-muszaki-allapotfelmeres?lang=en</loc>
   </url>
   <url>
     <loc>https://ingatlankockazat.hu/adatkezeles</loc>
