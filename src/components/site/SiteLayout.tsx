@@ -6,6 +6,7 @@ import logoMark from "@/assets/redesign/logo-mark.png";
 import { useLanguage } from "@/lib/i18n/Language";
 import { localisedPath } from "@/lib/i18n/routing";
 import { initAnalytics, trackPageView } from "@/lib/analytics";
+import { CookieConsent, openCookieSettings } from "@/components/site/CookieConsent";
 
 const links = [
   { to: "/", label: "Kezdőlap" },
@@ -49,7 +50,8 @@ export function SiteLayout() {
       {open && <nav className="mobile-menu" aria-label={tr("Mobil navigáció")}>{links.map(link => <NavLink key={link.to} to={path(link.to)} end={link.to === "/"} className={({isActive}) => `mobile-link ${isActive ? "text-accent" : ""}`}>{tr(link.label)}</NavLink>)}<Link className="button-primary justify-center" to={path("/kapcsolat")}>{tr("Beszéljünk →")}</Link></nav>}
     </header>
     <main><Outlet /></main>
-    <footer className="site-footer"><div className="site-container footer-row"><div>{tr("© 2026 Ingatlankockázat")}</div><div className="flex flex-wrap gap-5"><Link to={path("/adatkezeles")}>{tr("Adatkezelés")}</Link><Link to={path("/impresszum")}>{tr("Impresszum")}</Link></div></div></footer>
+    <footer className="site-footer"><div className="site-container footer-row"><div>{tr("© 2026 Ingatlankockázat")}</div><div className="flex flex-wrap gap-5"><Link to={path("/adatkezeles")}>{tr("Adatkezelés")}</Link><Link to={path("/impresszum")}>{tr("Impresszum")}</Link><button type="button" className="footer-cookie" onClick={openCookieSettings}>{tr("Süti beállítások")}</button></div></div></footer>
+    <CookieConsent />
   </div>;
 }
 
