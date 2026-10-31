@@ -1,7 +1,8 @@
 # Google Analytics 4 bekötése a teljes weboldalra
 
 ## Mit kapsz
-- Minden oldal mérve lesz, magyarul és angolul is: Kezdőlap, Szolgáltatások, Rólunk, Kapcsolat, Adatkezelés, Impresszum, a rejtett kampány landing (`/ingatlan-atvilagitas`) és a műszaki útmutató.
+- Minden oldal mérve lesz, magyarul és angolul is: Kezdőlap, Szolgáltatások, Rólunk, Kapcsolat, Adatkezelés, Impresszum és a műszaki útmutató.
+- Mindkét rejtett kampány landing is: a magyar (`/ingatlan-atvilagitas`) és az angol (`/ingatlan-atvilagitas?lang=en`). A GA4-ben külön látszanak, a nyelv szerint szétválasztva.
 - Oldalváltáskor is külön oldalmegtekintés megy a Google-nek. (A weboldal kattintáskor nem tölt be újra, ezért ezt külön kell küldeni.)
 - A kampányok forrásadatai (UTM, gclid) is megérkeznek a GA4-be.
 - Plusz események: elküldött űrlap („generate_lead”), telefon- és WhatsApp-kattintás, hogy lásd, honnan jönnek az érdeklődők.
