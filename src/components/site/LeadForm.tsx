@@ -61,10 +61,13 @@ export default function LeadForm() {
   const [done, setDone] = useState(false);
   const [contactPrompt, setContactPrompt] = useState(false);
   const phoneRef = useRef<HTMLInputElement>(null);
+  const startedAt = useRef(Date.now());
 
   const questions = [...(byTopic[topic] ?? []), ...common];
 
   async function send(stage: "partial" | "submitted") {
+    // Spam guard: honeypot filled or humanly impossible speed → silently drop.
+    if (website || Date.now() - startedAt.current < MIN_FILL_MS) return;
     let attribution: Record<string, string> = {};
     try { attribution = JSON.parse(sessionStorage.getItem("ik-attribution") || "{}"); } catch { /* ignore */ }
     const page = window.location.pathname.replace(import.meta.env.BASE_URL.replace(/\/$/, ""), "") || "/";
