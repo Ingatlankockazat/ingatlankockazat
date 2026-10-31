@@ -47,9 +47,9 @@ export default function LandingPage() {
     ["Nincs időd mindennek utánajárni?", "A megtekintés, a műszaki kérdések és a vásárlás körüli teendők mellett jól jönne valaki, aki a te oldaladon áll."],
   ];
   const steps = [
-    ["Jelzed, hogy beszélgetnél", "Az alábbi űrlapon megadod, hol tartasz, és hogyan érhetünk el. Telefonszám vagy e-mail-cím is megfelelő."],
-    ["Egyeztetjük a beszélgetést", "Felvesszük veled a kapcsolatot, és megbeszéljük a neked megfelelő időpontot és csatornát."],
-    ["15 percben megismerjük egymást", "Beszélünk a helyzetedről és arról, hogyan tudnánk együtt dolgozni. Utána te döntesz a folytatásról."],
+    ["Megadod az elérhetőségedet", "Töltsd ki az alábbi rövid űrlapot, vagy írj WhatsAppon. Telefonszámot vagy e-mail-címet is megadhatsz."],
+    ["15 perces beszélgetés", "Meghallgatjuk az elképzeléseidet, megválaszoljuk a kérdéseidet, és őszinte első képet adunk."],
+    ["Te döntesz a folytatásról", "Ha szeretnéd a segítségünket, elmondjuk, hogyan tudunk együtt dolgozni. Ha nem, független tanácsokkal távozol."],
   ];
   const gets = [
     "Elmondhatod, hol tartasz, és milyen segítséget keresel.",
@@ -61,7 +61,7 @@ export default function LandingPage() {
     ["Mit jelent az ismerkedő beszélgetés?", "Megismerjük a helyzetedet, az elképzeléseidet és azt, milyen segítséget keresel. Elmondjuk, hogyan tudnánk együtt dolgozni. Ez nem helyszíni felmérés vagy részletes műszaki értékelés; ezek külön szolgáltatások."],
     ["Hogyan és mikor beszélünk?", "Telefonon, WhatsAppon vagy online, előre egyeztetett időpontban. Az űrlapon hagyj telefonszámot vagy e-mail-címet, hogy meg tudjuk szervezni a beszélgetést."],
     ["Akkor is jelentkezhetek, ha még nincs konkrét ingatlan?", "Igen. Akkor is beszélhetünk az együttműködésről, ha még keresel, és akkor is, ha már van kiszemelt lakásod vagy házad."],
-    ["Mennyibe kerül a segítség, ha folytatni szeretném?", "Az első beszélgetés ingyenes. A további szolgáltatások kezdő árai: első megtekintés – lakás 50 000 Ft-tól, ház 70 000 Ft-tól; helyszíni felmérés – lakás 150 000 Ft-tól, ház 200 000 Ft-tól; szakmai értékelés és tervezés – lakás 350 000 Ft-tól, ház 550 000 Ft-tól. A fizetős segítség külön egyeztetés alapján indul, a jelentkezés nem kötelez rá."],
+    ["Mennyibe kerül a segítség, ha folytatni szeretném?", "Az első beszélgetés ingyenes. A további szolgáltatások kezdő árai: első megtekintés – lakás 50 000 Ft-tól, ház 70 000 Ft-tól; helyszíni felmérés – lakás 150 000 Ft-tól, ház 200 000 Ft-tól; szakmai értékelés és tervezés – lakás 350 000 Ft-tól, ház 550 000 Ft-tól. De a helyszíni vizsgálat csak a kezdet: teljes körű, end-to-end szolgáltatást is vállalunk – teljes projektmenedzsment, konfliktuskezelés és vitarendezés, teljes körű pénzügyi tanácsadás (hitel és biztosítás), az ingatlan jogi hátterének áttekintése, az adásvételi folyamat nyomon követése és szakmai felügyelete, karbantartási és üzemeltetési tanácsadás – sőt, ha befektetésként veszed, később az ingatlan értékesítésében is segítünk. A fizetős segítség külön egyeztetés alapján indul, a 15 perces ingyenes beszélgetés nem kötelez semmire."],
     ["Hol tudtok személyesen segíteni?", "Budapesten és Pest megyében. A helyszíni együttműködés lehetőségeit a beszélgetés során egyeztetjük."],
   ];
 
@@ -69,11 +69,11 @@ export default function LandingPage() {
     <div className="landing-page lp-hu">
       <section className="lp-hero" style={{ backgroundImage: `url(${images.hero})` }}>
         <div className="site-container lp-hero-inner">
-          <p className="kicker">Ingyenes, 15 perces ismerkedő beszélgetés</p>
-          <h1>Ingatlant vennél? Legyen valaki a te oldaladon.</h1>
-          <p className="lead">Nem kell egyedül eligazodnod a vásárlás kérdéseiben. Beszéljünk arról, hol tartasz, és hogyan tudunk melletted állni – még mielőtt szolgáltatást választanál.</p>
+          <p className="kicker">Ingatlan átvilágítás vásárlás előtt</p>
+          <h1>Tudd meg, mit rejt az ingatlan, mielőtt aláírod a szerződést.</h1>
+          <p className="lead">Független műszaki szakértőként feltárjuk a rejtett hibákat, és megmutatjuk, mennyibe kerülnek. Így nem utólag, hanem még a döntés előtt tudod meg.</p>
           <div className="lp-cta-row">
-            <Button className="button-primary" onClick={toForm}>Kérem az ingyenes beszélgetést <span>→</span></Button>
+            <Button className="button-primary" onClick={toForm}>Ingyenes 15 perces konzultáció foglalása <span>→</span></Button>
             <a className="lp-phone" href={`tel:${PHONE}`}><Phone size={18} /> {PHONE_LABEL}</a>
             <a className="lp-phone" href="https://wa.me/36309039630" target="_blank" rel="noopener noreferrer"><MessageCircle size={18} /> WhatsApp</a>
           </div>
@@ -96,7 +96,7 @@ export default function LandingPage() {
             <p className="kicker">A te ingyenes 15 perced</p>
             <strong className="lp-call-price">0 Ft</strong>
             <p>Ismerkedő beszélgetés Pádár Attilával. Nem felmérés, nem értékesítési kötelezettség – lehetőség arra, hogy kiderüljön, tudunk-e együtt dolgozni.</p>
-            <Button className="button-primary" onClick={toForm}>Kérem az ingyenes beszélgetést <span>→</span></Button>
+            <Button className="button-primary" onClick={toForm}>Ingyenes 15 perces konzultáció foglalása <span>→</span></Button>
           </div>
         </div>
       </section>
@@ -118,7 +118,7 @@ export default function LandingPage() {
             <p className="lp-role">Tulajdonos</p>
             <p className="lead">Az elmúlt 30 évben álltam eladói, vevői, befektetői és kivitelezői oldalon is. Olyan helyzetekkel is találkoztam, amelyek még szakmai háttérrel is komoly fejtörést okoztak.</p>
             <p>Ezt a tapasztalatot szeretném a te javadra fordítani, ha nincs időd, szakértelmed vagy független segítséged. Az első kérdésektől egy projekt teljes megvalósulásáig tudlak támogatni, kizárólag a te érdekeidet szem előtt tartva.</p>
-            <Button className="button-primary" onClick={toForm}>Beszéljünk 15 percet <span>→</span></Button>
+            <Button className="button-primary" onClick={toForm}>Ingyenes 15 perces konzultáció foglalása <span>→</span></Button>
           </div>
         </div>
       </section>
@@ -126,7 +126,7 @@ export default function LandingPage() {
       <section className="lp-section">
         <div className="site-container">
           <p className="kicker">Így jutunk el az első beszélgetésig</p>
-          <h2>Jelentkezel. Egyeztetünk. Beszélgetünk.</h2>
+          <h2>Három egyszerű lépés.</h2>
           <div className="lp-steps">{steps.map(([h, p], i) => <article className="lp-step" key={h}><span className="lp-num">0{i + 1}</span><h3>{h}</h3><p>{p}</p></article>)}</div>
         </div>
       </section>
@@ -144,12 +144,11 @@ export default function LandingPage() {
 
       <section className="lp-final">
         <div className="site-container">
-          <h2>A következő lépés nem egy megrendelés. Csak egy beszélgetés.</h2>
-          <p>15 perc, hogy megismerjük egymást, és megbeszéljük, hogyan tudunk együtt dolgozni.</p>
-          <Button className="button-primary" onClick={toForm}>Kérem az ingyenes beszélgetést <span>→</span></Button>
+          <h2>Nézzük meg együtt, mielőtt aláírsz.</h2>
+          <Button className="button-primary" onClick={toForm}>Ingyenes 15 perces konzultáció foglalása <span>→</span></Button>
         </div>
       </section>
-      <div className="lp-sticky"><Button className="button-primary" onClick={toForm}>Ingyenes 15 perces beszélgetés →</Button><a href={`tel:${PHONE}`} aria-label="Hívás"><Phone size={20} /></a></div>
+      <div className="lp-sticky"><Button className="button-primary" onClick={toForm}>Ingyenes 15 perces konzultáció foglalása →</Button><a href={`tel:${PHONE}`} aria-label="Hívás"><Phone size={20} /></a></div>
     </div>
   );
 }
