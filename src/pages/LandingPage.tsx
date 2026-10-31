@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Check, Phone, ShieldCheck, FileText, Search, MessageCircle } from "lucide-react";
 import LeadForm from "@/components/site/LeadForm";
+import LandingPageEn from "./LandingPageEn";
 import { images } from "@/assets/redesign";
 import portrait from "@/assets/redesign/about-portrait.jpg";
 import { useLanguage } from "@/lib/i18n/Language";
@@ -23,8 +24,8 @@ export default function LandingPage() {
 
   useEffect(() => {
     const prev = document.title;
-    const title = t("Ingatlan átvilágítás vásárlás előtt – független műszaki szakértő | Ingatlankockázat", "Pre-purchase property inspection – independent technical expert | Property Support");
-    const desc = t("Mielőtt aláírsz: független műszaki felmérés, rejtett hibák feltárása és tárgyalási érvek. Budapest és Pest megye. Ingyenes első konzultáció.", "Before you sign: an independent technical survey, hidden defects uncovered and solid negotiating points. Budapest and Pest County. Free first consultation.");
+    const title = t("Ingatlan átvilágítás vásárlás előtt – független műszaki szakértő | Ingatlankockázat", "Buying property in Budapest? Free 15-minute call with an independent expert | Property Support");
+    const desc = t("Mielőtt aláírsz: független műszaki felmérés, rejtett hibák feltárása és tárgyalási érvek. Budapest és Pest megye. Ingyenes első konzultáció.", "Buying property in Hungary from abroad? We guide you through the process, shortlist properties and represent you on the ground. Book a free 15-minute call.");
     document.title = title;
     const added = [
       setMeta('meta[name="description"]', "name", "description", desc),
@@ -36,6 +37,7 @@ export default function LandingPage() {
     return () => { document.title = prev; added[3].remove(); added[4].remove(); };
   }, [language]);
 
+  if (en) return <LandingPageEn />;
   const toForm = () => document.getElementById("erdeklodom")?.scrollIntoView({ behavior: "smooth" });
   const from = (huf: string) => tr(huf).replace(/^From /, "from ");
 

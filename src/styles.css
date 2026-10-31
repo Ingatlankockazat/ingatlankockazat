@@ -448,3 +448,4 @@
 .landing-page .lp-sticky .button-primary{flex:1;justify-content:center}
 .landing-page .lp-sticky a{display:grid;place-items:center;width:3rem;border:1px solid var(--border);border-radius:999px;color:var(--accent)}
 }
+.lp-en .lp-en-lead2{margin-top:.75rem}.lp-en .lp-prices .button-primary{margin-top:1.25rem;justify-content:center}
