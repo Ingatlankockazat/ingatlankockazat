@@ -1,4 +1,4 @@
-import { Check, Phone, ShieldCheck, MessageCircle, MapPin, Search, Video, Handshake } from "lucide-react";
+import { Check, Phone, ShieldCheck, MessageCircle, MapPin, Search, Handshake } from "lucide-react";
 import LeadForm from "@/components/site/LeadForm";
 import { images } from "@/assets/redesign";
 import portrait from "@/assets/redesign/about-portrait.jpg";
@@ -72,7 +72,7 @@ export default function LandingPageEn() {
         <div className="site-container">
           <p className="kicker">Why foreign buyers get caught out</p>
           <h2>The market wasn't built with you in mind.</h2>
-          <div className="lp-risks">{fears.map(([h, p]) => <article key={h}><h3>{h}</h3><p>{p}</p></article>)}</div>
+          <div className="lp-grid">{fears.map(([h, p]) => <article className="lp-card" key={h}><h3>{h}</h3><p>{p}</p></article>)}</div>
         </div>
       </section>
 
@@ -110,7 +110,7 @@ export default function LandingPageEn() {
         <div className="site-container">
           <p className="kicker">How it works</p>
           <h2>Three simple steps.</h2>
-          <div className="lp-steps">{steps.map(([h, p], i) => <article className="lp-step" key={h}><span className="lp-num">0{i + 1}</span><Video className="lp-icon" style={{ display: "none" }} /><h3>{h}</h3><p>{p}</p></article>)}</div>
+          <div className="lp-steps">{steps.map(([h, p], i) => <article className="lp-step" key={h}><span className="lp-num">0{i + 1}</span><h3>{h}</h3><p>{p}</p></article>)}</div>
         </div>
       </section>
 

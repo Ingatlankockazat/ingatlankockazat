@@ -41,7 +41,7 @@ export function SiteLayout() {
         <div className="flex items-center gap-3">
           {!minimal && <Link className="button-primary hidden sm:inline-flex" to={path("/kapcsolat")}>{tr("Beszéljünk")} <span>→</span></Link>}
           {!minimal && <button className="icon-button header-burger" aria-label={tr(open ? "Menü bezárása" : "Menü megnyitása")} onClick={() => setOpen(value => !value)}>{open ? <X /> : <Menu />}</button>}
-          <nav className="language-switch" aria-label={language === "en" ? "Language" : "Nyelv"}>{(["hu", "en"] as const).map(lang => <Link key={lang} to={localisedPath(location.pathname + location.search + location.hash, lang)} replace preventScrollReset lang={lang} aria-label={lang === "hu" ? "Magyar" : "English"} aria-current={language === lang ? "true" : undefined}>{lang.toUpperCase()}</Link>)}</nav>
+          {!minimal && <nav className="language-switch" aria-label={language === "en" ? "Language" : "Nyelv"}>{(["hu", "en"] as const).map(lang => <Link key={lang} to={localisedPath(location.pathname + location.search + location.hash, lang)} replace preventScrollReset lang={lang} aria-label={lang === "hu" ? "Magyar" : "English"} aria-current={language === lang ? "true" : undefined}>{lang.toUpperCase()}</Link>)}</nav>}
         </div>
       </div>
       {open && <nav className="mobile-menu" aria-label={tr("Mobil navigáció")}>{links.map(link => <NavLink key={link.to} to={path(link.to)} end={link.to === "/"} className={({isActive}) => `mobile-link ${isActive ? "text-accent" : ""}`}>{tr(link.label)}</NavLink>)}<Link className="button-primary justify-center" to={path("/kapcsolat")}>{tr("Beszéljünk →")}</Link></nav>}
