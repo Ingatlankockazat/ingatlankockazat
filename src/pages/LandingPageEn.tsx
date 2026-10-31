@@ -1,10 +1,8 @@
-import { Phone, ShieldCheck, MessageCircle, MapPin, Search, Handshake } from "lucide-react";
+import { ShieldCheck, MessageCircle, MapPin, Search, Handshake } from "lucide-react";
 import LeadForm from "@/components/site/LeadForm";
 import { images } from "@/assets/redesign";
 import portrait from "@/assets/redesign/about-portrait.jpg";
 
-const PHONE = "+36309039630";
-const PHONE_LABEL = "+36 30 903 9630";
 const WHATSAPP = "https://wa.me/36309039630";
 
 export default function LandingPageEn() {
@@ -46,7 +44,6 @@ export default function LandingPageEn() {
           <div className="lp-cta-row">
             <button className="button-primary" onClick={toForm}>Book a free 15-minute call <span>→</span></button>
             <a className="lp-phone" href={WHATSAPP} target="_blank" rel="noopener noreferrer"><MessageCircle size={18} /> WhatsApp</a>
-            <a className="lp-phone" href={`tel:${PHONE}`}><Phone size={18} /> {PHONE_LABEL}</a>
           </div>
           <ul className="lp-trust">
             {["100% buyer-side", "30 years in property", "English-speaking", "Free, no obligation"].map(x => <li key={x}><ShieldCheck size={16} />{x}</li>)}
@@ -125,7 +122,7 @@ export default function LandingPageEn() {
         </div>
       </section>
 
-      <div className="lp-sticky"><button className="button-primary" onClick={toForm}>Book free call →</button><a href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><MessageCircle size={20} /></a><a href={`tel:${PHONE}`} aria-label="Call"><Phone size={20} /></a></div>
+      <div className="lp-sticky"><button className="button-primary" onClick={toForm}>Book free call →</button><a href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><MessageCircle size={20} /></a></div>
     </div>
   );
 }
