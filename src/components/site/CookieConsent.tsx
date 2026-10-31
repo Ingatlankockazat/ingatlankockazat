@@ -15,7 +15,7 @@ export function CookieConsent() {
   if (!open) return null;
   const choose = (c: ConsentChoice) => { saveConsent(window.localStorage, c, window.gtag); setOpen(false); };
   return <div className="cookie-bar" role="dialog" aria-label={tr("Süti beállítások")}>
-    <p>{tr("Látogatottsági statisztikához (Google Analytics) sütiket használnánk. Csak a hozzájárulásoddal kapcsoljuk be.")}{" "}<Link to={path("/adatkezeles")} className="accent-text underline">{tr("Részletek")}</Link></p>
+    <p>{tr("Segíts, hogy még jobbá tegyük az oldalunkat! Ehhez sütiket használnánk, de csak a beleegyezéseddel.")}{" "}<Link to={path("/adatkezeles")} className="accent-text underline">{tr("Részletek")}</Link></p>
     <div className="cookie-actions">
       <button type="button" className="cookie-secondary" onClick={() => choose("denied")}>{tr("Csak a szükségesek")}</button>
       <button type="button" className="button-primary" onClick={() => choose("granted")}>{tr("Elfogadom")}</button>
