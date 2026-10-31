@@ -71,7 +71,7 @@ export default function LandingPage() {
         <div className="site-container lp-hero-inner">
           <p className="kicker">Ingatlan átvilágítás vásárlás előtt</p>
           <h1>Tudd meg, mit rejt az ingatlan, mielőtt aláírod a szerződést.</h1>
-          <p className="lead">Független műszaki szakértőként feltárjuk a rejtett hibákat, és megmutatjuk, mennyibe kerülnek. Így nem utólag, hanem még a döntés előtt tudod meg.</p>
+          <p className="lead">Független műszaki szakértőként feltárjuk a rejtett hibákat, és megmutatjuk, mennyibe kerülnek. Amit vásárlás előtt nem veszel észre, azért vásárlás után te fogsz fizetni.</p>
           <div className="lp-cta-row">
             <Button className="button-primary" onClick={toForm}>Ingyenes 15 perces konzultáció foglalása <span>→</span></Button>
             <a className="lp-phone" href={`tel:${PHONE}`}><Phone size={18} /> {PHONE_LABEL}</a>
