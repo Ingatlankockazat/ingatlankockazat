@@ -84,6 +84,14 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section className="lp-section">
+        <div className="site-container">
+          <p className="kicker">Ismerős a helyzet?</p>
+          <h2>Nem kell mindenhez értened. És nem kell egyedül döntened.</h2>
+          <div className="lp-grid">{situations.map(([h, p]) => <article className="lp-card" key={h}><h3>{h}</h3><p>{p}</p></article>)}</div>
+        </div>
+      </section>
+
       <section className="lp-section lp-surface">
         <div className="site-container lp-split">
           <div>
@@ -98,14 +106,6 @@ export default function LandingPage() {
             <p>Ismerkedő beszélgetés Pádár Attilával. Nem felmérés, nem értékesítési kötelezettség – lehetőség arra, hogy kiderüljön, tudunk-e együtt dolgozni.</p>
             <Button className="button-primary" onClick={toForm}>Ingyenes 15 perces konzultáció foglalása <span>→</span></Button>
           </div>
-        </div>
-      </section>
-
-      <section className="lp-section">
-        <div className="site-container">
-          <p className="kicker">Ismerős a helyzet?</p>
-          <h2>Nem kell mindenhez értened. És nem kell egyedül döntened.</h2>
-          <div className="lp-grid">{situations.map(([h, p]) => <article className="lp-card" key={h}><h3>{h}</h3><p>{p}</p></article>)}</div>
         </div>
       </section>
 
