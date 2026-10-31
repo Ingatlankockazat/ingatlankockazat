@@ -5,6 +5,7 @@ import { useLanguage, LanguageLink as Link } from "@/lib/i18n/Language";
 import { trackEvent } from "@/lib/analytics";
 
 const CONSENT_VERSION = "2026-10-29-v1";
+const MIN_FILL_MS = 2500;
 const endpoint = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/lead-capture`;
 
 type Question = { key: string; label: string; options: string[] };
